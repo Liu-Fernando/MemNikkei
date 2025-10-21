@@ -10,3 +10,15 @@ https://www.w3schools.com/howto/howto_website_bootstrap5.asp
 https://www.w3schools.com/howto/tryhow_website_bootstrap5.htm
 https://www.reddit.com/r/learnprogramming/comments/2h6aw0/organizing_files_when_building_a_website/
 ^Instruções de como começar a codar um website
+
+https://www.w3schools.com/css/css_howto.asp
+https://stackoverflow.com/questions/34110819/link-css-from-another-folder
+https://www.w3schools.com/html/html_css.asp
+https://www.w3schools.com/howto/howto_css_responsive_text.asp
+https://www.w3schools.com/css/css_font.asp
+https://forum.codewithmosh.com/t/view-changes-on-mobile-device/26707/4 -- Visualização em viewport
+^Codando o site
+
+Live server para par programming
+
+Dimensões = 370 x 700
