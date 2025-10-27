@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Inter;
+    src: url(INTER-VARIABLEFONT_OPSZ,WGHT.TTF);
+}
+header {
+    font-family: 'Noto Serif Japanese';
+    background-color: #d52229;
+    color: #ffffff;
+    font-size: 10vw;
+}
+
+p{
+    font-size: 25px;
+    font-family: Inter;
+}
+
+.botoes{
+    font-family: Inter ;
+    width: 85vw;
+    height: 22vw;
+    display: block;
+    margin: 0 auto ; 
+    background-color: #1e2a38 ;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 8vw; 
+    font-weight: bold;
+}
+
+
+.botoes:active{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color:#08274b ;
+    color: #f7d8b4;
+    
+}
+.saudeCerebral{
+    background-color: white;
+    background-color: rgb(233, 47, 224);
+    width: 33vw;
+    height: 10vw;
+    font-size: 5vw;
+}
+.caixinha{
+    background-color: #f24e75;
+    border-radius: 20px;
+    padding: 15px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    max-width: 400px;
+}
+
+.texto{
+    flex: 1;
+}
+
+.texto p{
+    font-family: Inter;
+    color: white;
+    font-size: 8vw;
+    margin: 0;
+    flex: 1;
+    font-weight: bold;
+}
+
+.resumoVideo p{
+    font-family: Inter;
+    font-size: 6vw;
+}
+
+.creditos p{
+    font-family: Inter;
+    font-size: 4vw;
+}
+
+body{
+    background-color: #f7f6f2;
+    font-family: Inter, Arial, sans-serif;
+}

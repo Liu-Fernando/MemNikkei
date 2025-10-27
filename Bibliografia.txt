@@ -22,3 +22,15 @@ https://forum.codewithmosh.com/t/view-changes-on-mobile-device/26707/4 -- Visual
 Live server para par programming
 
 Dimensões = 370 x 700
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
