@@ -1,88 +1,104 @@
 @charset "UTF-8";
+
 @font-face {
     font-family: Inter;
     src: url(INTER-VARIABLEFONT_OPSZ,WGHT.TTF);
 }
+
 header {
     font-family: 'Noto Serif Japanese';
     background-color: #d52229;
     color: #ffffff;
     font-size: 10vw;
+    width: 100%;
+    margin-left: 0px;
+    /** fazer o header ficar grudadinho na tela **/
+    padding: 5px;
+    /** fazer o header ficar grudadinho na tela **/
 }
 
-p{
+p {
     font-size: 25px;
     font-family: Inter;
 }
 
-.botoes{
-    font-family: Inter ;
+.botoes {
+    font-family: Inter;
     width: 85vw;
     height: 22vw;
     display: block;
-    margin: 0 auto ; 
-    background-color: #1e2a38 ;
+    margin: 0 auto;
+    background-color: #1e2a38;
     color: white;
     padding: 10px 15px;
     border-radius: 10px;
-    font-size: 8vw; 
+    font-size: 8vw;
     font-weight: bold;
 }
 
 
-.botoes:active{
+.botoes:active {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-    background-color:#08274b ;
+    background-color: #08274b;
     color: #f7d8b4;
-    
+
 }
-.saudeCerebral{
+
+.saudeCerebral {
     background-color: white;
     background-color: rgb(233, 47, 224);
     width: 33vw;
     height: 10vw;
     font-size: 5vw;
 }
-.caixinha{
+
+.caixinha {
     background-color: #f24e75;
     border-radius: 20px;
-    padding: 15px;
+    padding: 2vw;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
     gap: 20px;
     display: flex;
-    max-width: 400px;
 }
 
-.texto{
+.fotoVideosProf {
+    border-radius: 20px;
+    padding-right: 8px;
+    padding-top: 3.5px;
+}
+
+.texto {
     flex: 1;
 }
 
-.texto p{
+.texto p {
     font-family: Inter;
     color: white;
-    font-size: 8vw;
+    font-size: 7vw;
     margin: 0;
-    flex: 1;
     font-weight: bold;
+    text-align: center;
+    padding-left: 5px;
 }
 
-.resumoVideo p{
+.resumoVideo p {
     font-family: Inter;
-    font-size: 6vw;
+    font-size: 5.5vw;
+    text-align: center;
 }
 
-.creditos p{
+.creditos p {
     font-family: Inter;
     font-size: 4vw;
+    text-align: right;
+    padding: 5px;
 }
 
-body{
+body {
     background-color: #f7f6f2;
     font-family: Inter, Arial, sans-serif;
 }
