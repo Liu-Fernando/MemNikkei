@@ -13,7 +13,7 @@ def paginaInicial():
 
 @app.route("/saudeCerebral")
 def saudeCerebral():
-        return render_template("saudeCerebral.html")
+        return render_template("saudeMental_Cerebral.html")
 
 @app.route("/saudeMental")
 def saudeMental():
