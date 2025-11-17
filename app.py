@@ -19,5 +19,9 @@ def saudeCerebral():
 def saudeMental():
         return render_template("saudeMental.html")
 
+@app.route("/saudeAlzheimer")
+def saudeMental_Alzheimer():
+        return render_template("saudeMental_Alzheimer.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

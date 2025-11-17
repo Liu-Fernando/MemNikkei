@@ -19,6 +19,11 @@ https://www.w3schools.com/css/css_font.asp
 https://forum.codewithmosh.com/t/view-changes-on-mobile-device/26707/4 -- Visualização em viewport
 ^Codando o site
 
+https://help.pythonanywhere.com/pages/ExternalVCS
+https://docs.github.com/pt/get-started/git-basics/about-remote-repositories
+^
+Host online do site Tentamos Netlify->somente site estático, Heroku->pago, tentando PythonAnywhere
+
 Live server para par programming
 
 Dimensões = 370 x 700
