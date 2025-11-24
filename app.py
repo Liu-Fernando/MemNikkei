@@ -24,4 +24,4 @@ def saudeMental_Alzheimer():
         return render_template("saudeMental_Alzheimer.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8000, debug=True)
