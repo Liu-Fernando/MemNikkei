@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
+
+
 <body>
+
+    <!-- Template para a pagina em si (criaremos 5 iguais)-->
+    <template id = "templatePaginaSaudeMental">
+        <header> Memórias Nikkei </header>
+
+        <section class="conteudo"> 
+        
+        <nav class="nav-localizacao">
+            <button class="botoes saudeMental" id="btCerebral"> Saúde Mental </button>
+            <Span style="user-select: none;">&gt;&gt;</Span>
+            <button class="botoes saudeMental" id="btCerebral"> Saúde cerebral </button>
+        </nav>
+
+        <!-- Template para cada caixinha, seu conteudo, resumo do video e creditos 
+         NAO USAR ID DENTRO DO TEMPLATE 
+        -->
+        <template id = "templateCaixinhasSaudeMental"> 
+
+            <div class = "caixinha">
+                <div class= "texto" >
+                    <p> </p>
+                </div>
+                <div class = " thumbnail ">
+                    <img> </img> 
+                </div>
+            </div>
+
+            <div class= "resumoVideo">
+                <p> </p>
+            </div>
+                
+            <!-- Se quiser mudar os creditos do video, vai ter que mudar o JS tambem -->
+            <div class = "creditosVideo">
+                <p> Dra. Deusivania Falcão </p>
+            </div>
+
+        </template>
+        </section>
+
+    </template>
     
 </body>
 </html>
