@@ -26,18 +26,25 @@ https://docs.github.com/pt/get-started/git-basics/about-remote-repositories
 Host online do site Tentamos Netlify->somente site estático, Heroku->pago, tentando PythonAnywhere
 
 
-como usar o template
-
 https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots#Adding_flexibility_with_slots
 https://www.w3schools.com/tags/tag_template.asp
+^Como usar template HTML
 
+https://archive.is/20251013084753/https://medium.com/@cobchenyuk/the-complete-guide-to-naming-conventions-in-web-development-25fb6d2f07f5
+^Convenção de nomes
 
 Live server para par programming
 
 https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 ^Instruções para reutilizar componentes HTML
 Dimensões = 370 x 700
+
+
+Como colocar um text box em html (para usuários conseguirem digitar)
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/text
+https://www.w3schools.com/tags/att_input_type_text.asp
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

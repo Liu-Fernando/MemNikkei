@@ -6,17 +6,6 @@
 }
 
 /*      ||configurações gerais             */
-header {
-    font-family: 'Noto Serif Japanese';
-    background-color: #d52229;
-    color: #ffffff;
-    font-size: 10vw;
-    width: 100%;
-    margin-left: 0px;
-    /** fazer o header ficar grudadinho na tela **/
-    padding: 9px;
-    /** fazer o header ficar grudadinho na tela **/
-}
 
 a{
     color: inherit;
@@ -31,6 +20,7 @@ p {
     font-size: 25px;
     font-family: Inter;
     padding: 10px 15px;
+    
 }
 
 /*      ||itens        */
@@ -49,7 +39,7 @@ p {
 }
 
 
-.botoes:active {
+.botoes:active { /*      TO-DO modificar a cor e a escala corretamente             */
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -o-transform: scale(1.1);
@@ -77,6 +67,39 @@ p {
     background-color: #f24e75;
 }
 
+.Img_Texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.rodapeIni{
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 3px;
+}
+
+.icones_social{
+    display: felx;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px; 
+}
+
+.icone {
+    width: 15px;
+    height: auto;
+    cursor: pointer;
+}
+
+.icone:hover{
+    transform: scale(1.12);
+}
+
+
+/*formatação da Tag a para parecer botao*/
 a.btn{
     all: unset;
     box-sizing: border-box;
@@ -96,6 +119,7 @@ a.btn{
     border-radius: 10px;
     font-size: 8vw;
     font-weight: bold;
+    text-align: center;
 
     text-decoration: none;
     cursor: pointer;
@@ -190,4 +214,67 @@ body {
     font-family: Inter, Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+/* titulo quase do mesmo tamanho que o paragrafo, mas em negrito (pagina minhas memorias)*/
+#titulinho{
+    padding-top: 10vw;
+    padding-bottom: 0vw;
+    margin: 4vw;
+}
+
+/* paragrafo (pagina minhas memorias) */
+#paragrafinho{
+    padding-top: 0vw;
+}
+
+/* botoes (pagina minhas memorias) */
+#BotaoAdicionarMemoria{
+    all: unset;
+    box-sizing: border-box;
+
+    font-family: Inter;
+    width: 85vw;
+    height: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    background-color: #1e2a38;
+    color: white;
+
+    padding: 10px 15px;
+    border-radius: 30vw;
+    font-size: 15vw;
+    font-weight: bold;
+    text-align: center;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.BotaoAzulClaro {
+    all: unset;
+    box-sizing: border-box;
+
+    font-family: Inter;
+    width: 85vw;
+    height: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    background-color: #1e497c;
+    color: white;
+
+    padding: 10px 15px;
+    border-radius: 15vw;
+    font-size: 8vw;
+    font-weight: bold;
+
+    text-decoration: none;
+    cursor: pointer;
 }

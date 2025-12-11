@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../static/style.css">
+    <script src="../static/components/header.js" type = "text/javascript" ></script>
+    <title>Adicionar Memoria</title>
+
+</head>
+
+    <header-component></header-component>
+
+    <section class = "conteudo" > 
+    <h2 id = "titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir fotos e vídeos (um de cada vez) </h2>
+
+    <a href = "Selecionar_Arquivo" class = "BotaoAzulClaro" > Selecionar Arquivo </a>
+
+    <label for="tituloMemoria">Título da memória: </label>
+    <input 
+        type="text" 
+        id="tituloMemoria" 
+        name="tituloMemoria"
+        required
+        minlength="5"
+        maxlength="30"
+        size="10"
+    ><br><br>
+
+    <label for="lname">Data da memória: </label>
+    <input
+        type="text" 
+        id="dataMemoria" 
+        name="dataMemoria"
+        required
+        minlength="5"
+        maxlength="30"
+        size="10"
+    ><br><br>
+
+    <label for="lname">Local da memória: </label>
+    <input
+        type="text" 
+        id="localMemoria" 
+        name="localMemoria"
+        required
+        minlength="5"
+        maxlength="30"
+        size="10"
+    ><br><br>
+
+    <input type="submit" value="Submit">
+
+    <!-- Temos que ver como vamos lidar com o recebimento dos nomes dos arquivos -->
+    </section>
+
+
+<body>
+
+</body>
