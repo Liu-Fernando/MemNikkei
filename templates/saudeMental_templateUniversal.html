@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../static/style.css">
-    <script src="../static/components/header.js" type = "text/javascript" ></script>
+    <script src="../static/components/header.js" type="text/javascript"></script>
 </head>
 
+<!--mudança-->
 
 <body>
     <header-component></header-component>
     <!-- Template para a pagina em si (criaremos 5 iguais)-->
     <main>
-        <template id = "templatePaginaSaudeMental"></template>
-        
+        <template id="templatePaginaSaudeMental"></template>
 
-        <section class="conteudo"> 
-        
-        <nav class="nav-localizacao">
-            <button class="botoes saudeMental" id="btCerebral"> Saúde Mental </button>
-            <Span style="user-select: none;">&gt;&gt;</Span>
-            <button class="botoes saudeMental" id="btCerebral"> Saúde cerebral </button>
-        </nav>
 
-        <!-- Template para cada caixinha, seu conteudo, resumo do video e creditos 
+        <section class="conteudo">
+
+            <nav class="nav-localizacao">
+                <button class="botoes saudeMental" id="btCerebral"> Saúde Mental </button>
+                <Span style="user-select: none;">&gt;&gt;</Span>
+                <button class="botoes saudeMental" id="btCerebral"> Saúde cerebral </button>
+            </nav>
+
+            <!-- Template para cada caixinha, seu conteudo, resumo do video e creditos 
          NAO USAR ID DENTRO DO TEMPLATE 
         -->
-        <template id = "templateCaixinhasSaudeMental"> 
+            <template id="templateCaixinhasSaudeMental">
 
-            <div class = "caixinha">
-                <div class= "texto" >
+                <div class="caixinha">
+                    <div class="texto">
+                        <p> </p>
+                    </div>
+                    <div class=" thumbnail ">
+                        <img> </img>
+                    </div>
+                </div>
+
+                <div class="resumoVideo">
                     <p> </p>
                 </div>
-                <div class = " thumbnail ">
-                    <img> </img> 
+
+                <!-- Se quiser mudar os creditos do video, vai ter que mudar o JS tambem -->
+                <div class="creditosVideo">
+                    <p> Dra. Deusivania Falcão </p>
                 </div>
-            </div>
 
-            <div class= "resumoVideo">
-                <p> </p>
-            </div>
-                
-            <!-- Se quiser mudar os creditos do video, vai ter que mudar o JS tambem -->
-            <div class = "creditosVideo">
-                <p> Dra. Deusivania Falcão </p>
-            </div>
-
-        </template>
+            </template>
         </section>
 
-    </template>
-    
+        </template>
+
     </main>
 </body>
+
 </html>
