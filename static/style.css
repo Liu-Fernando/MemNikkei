@@ -278,3 +278,73 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* caixa de texto para resposta página adicionar memória */
+.textBox{
+    font-family: Inter;
+    font-size: 7.5vw;
+    text-align: center;
+    padding-top: 8vw;
+    font-weight: bold;
+}
+
+/* botão enviar página adicionar memória */
+input[type="submit"] {
+    all: unset;
+    box-sizing: border-box;
+
+    font-family: Inter;
+    width: 50vw;
+    height: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    background-color: #1e497c;
+    color: white;
+
+    padding: 10px 15px;
+    border-radius: 15vw;
+    font-size: 9vw;
+    font-weight: bold;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="text"] {
+  width: 85vw; 
+  height: 8vw; 
+  padding: 1.4vw; 
+  font-size: 7vw;
+  border-color: black;
+  font-family: Inter;
+}
+
+/** cofiguração de texto da página linha do tempo **/
+
+.textoLinhaDoTempo{
+    font-size: 6vw;
+    text-align: center;
+}
+
+#negrito{
+    font-weight: bold;
+    text-align: left;
+}
+
+#pequenoNegrito{
+    font-size: 5vw;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 0vw;
+    margin-bottom: 0vw;;
+}
+
+#pequenoNormal{
+    font-size: 5vw;
+    text-align: left;
+    padding-top: 0vw;
+    margin-top: 0vw;
+}
