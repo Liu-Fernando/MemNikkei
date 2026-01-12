@@ -1,3 +1,5 @@
+<!-- TEM QUE BOTAR DESENHOS AQUI E A BARRA DE NAVEGAÇÃO -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,44 +14,48 @@
     <header-component></header-component>
 
     <section class = "conteudo" > 
-    <h2 id = "titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir fotos e vídeos (um de cada vez) </h2>
+    <h2 id = "titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir fotos e vídeos (um de cada vez). </h2>
 
     <a href = "Selecionar_Arquivo" class = "BotaoAzulClaro" > Selecionar Arquivo </a>
 
-    <label for="tituloMemoria">Título da memória: </label>
-    <input 
-        type="text" 
-        id="tituloMemoria" 
-        name="tituloMemoria"
-        required
-        minlength="5"
-        maxlength="30"
-        size="10"
-    ><br><br>
+    <div class = "textBox"> 
 
-    <label for="lname">Data da memória: </label>
-    <input
-        type="text" 
-        id="dataMemoria" 
-        name="dataMemoria"
-        required
-        minlength="5"
-        maxlength="30"
-        size="10"
-    ><br><br>
+        <label for="tituloMemoria">Título da memória: </label>
+        <input 
+            type="text" 
+            id="tituloMemoria" 
+            name="tituloMemoria"
+            required
+            minlength="5"
+            maxlength="30"
+            size="10"
+        ><br><br>
 
-    <label for="lname">Local da memória: </label>
-    <input
-        type="text" 
-        id="localMemoria" 
-        name="localMemoria"
-        required
-        minlength="5"
-        maxlength="30"
-        size="10"
-    ><br><br>
+        <label for="dataMemoria">Data da memória: </label>
+        <input
+            type="text" 
+            id="dataMemoria" 
+            name="dataMemoria"
+            required
+            minlength="10"
+            maxlength="10"
+            size="10"
+        ><br><br>
 
-    <input type="submit" value="Submit">
+        <label for="localMemoria">Local da memória: </label>
+        <input
+            type="text" 
+            id="localMemoria" 
+            name="localMemoria"
+            required
+            minlength="5"
+            maxlength="30"
+            size="10"
+        ><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </div>
 
     <!-- Temos que ver como vamos lidar com o recebimento dos nomes dos arquivos -->
     </section>
