@@ -417,5 +417,11 @@ input:focus, textarea:focus {
     padding-bottom: 0vw;
     margin-bottom: 0vw;
     padding-top: 0vw;
-    
+}
+
+/** CONFIGURAÇÕES PÁGINA MINHA JORNADA **/
+
+.textoPerguntaMinhaJornada{
+    font-size: 5vw;
+    font-weight: bold;
 }
