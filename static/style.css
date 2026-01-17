@@ -28,6 +28,11 @@ p {
     font-weight: bold;
 }
 
+/** para conseguir colocar underline em algumas palavras numa frase **/
+.underline{
+    text-decoration: underline ;
+}
+
 
 /*      ||itens        */
 .botoes {
@@ -322,20 +327,38 @@ input[type="submit"] {
 input[type="text"] {
   width: 85vw; 
   height: 8vw; 
-  padding: 1.4vw; 
+  padding: 2vw; 
   font-size: 7vw;
   border-color: black;
   font-family: Inter;
 }
 
+/** input da descrição. Precisa de mais espaço para a pessoa enxergar o que está escrevendo**/
+#descricao {
+    height: 100vw;
+    width: 90vw;
+    font-size: 7vw;
+    padding: 2vw;
+    border-color: black;
+    font-family: Inter;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
 input[type="date"]{
     width: 85vw; 
   height: 8vw; 
-  padding: 1.4vw; 
+  padding: 2vw; 
   font-size: 7vw;
   border-color: black;
   font-family: Inter;
 }
+
+/** Quando o usuário clica em uma parte do formulário, fica evidente que ele está escrevendo ali**/
+input:focus, textarea:focus {
+    box-shadow: 0vw 2vw 8vw 0vw blue; 
+}
+
 
 /** cofiguração de texto da página linha do tempo e autoconhecimento (alguns)**/
 
@@ -371,11 +394,28 @@ input[type="date"]{
     padding-top: 0vw;
     margin-top: 0vw;;
     padding-bottom: 0vw;
-    
+    margin-left: 4vw;
 }
 
 .fotosLinhaDoTempo{
-    width: 98vw;
+    width: 85vw;
     height: 60vw;
     display: block;
+    margin: auto;
+}
+
+/** CONFIGURAÇÕES PÁGINA AUTOCONHECIMENTO  **/
+
+.textoAutoconhecimento{
+    font-size: 8vw;
+    padding-bottom: 0vw;
+    margin-bottom: 0vw;
+}
+
+.itemAutoconhecimento{
+    font-size: 6vw;
+    padding-bottom: 0vw;
+    margin-bottom: 0vw;
+    padding-top: 0vw;
+    
 }

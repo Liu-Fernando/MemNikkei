@@ -14,7 +14,7 @@
     <header-component></header-component>
 
     <section class = "conteudo" > 
-    <h2 id = "titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir suas fotos (uma de cada vez). </h2>
+    <h2 id = "titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir uma fotos de cada vez. </h2>
 
     <a href = "Selecionar_Arquivo" class = "BotaoAzulClaro" > Selecionar Arquivo </a>
 
@@ -28,6 +28,7 @@
             minlength="5"
             maxlength="100"
             size="10"
+            placeholder="Digite o título da memória"
         ><br><br>
 
         <label for="dataMemoria">Data da memória: </label>
@@ -35,7 +36,7 @@
             type="date" 
             id="dataMemoria" 
             name="dataMemoria"
-            placeholder="DD/MM/AAAA"
+            placeholder="dd/mm/aaaa"
             required
         ><br><br>
 
@@ -48,22 +49,20 @@
             type="text" 
             id="localMemoria" 
             name="localMemoria"
-            required
             minlength="5"
             maxlength="30"
             size="10"
+            placeholder="Digite o local da memória"
         ><br><br>
 
-        <label for="descricao"> Descrição: </label>
-        <input
-            type="text" 
-            id="localMemoria" 
-            name="localMemoria"
-            required
+        <label for="descricao"> Descrição da memória: </label>
+        <textarea
+            id="descricao" 
+            name="descricao"
             minlength="5"
-            maxlength="200"
-            size="10"
-        ><br><br>
+            maxlength="400"
+            placeholder="Descreva esta memória"
+        ></textarea><br><br>
 
         <input type="submit" value="Enviar">
 
