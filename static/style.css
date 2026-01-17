@@ -328,6 +328,15 @@ input[type="text"] {
   font-family: Inter;
 }
 
+input[type="date"]{
+    width: 85vw; 
+  height: 8vw; 
+  padding: 1.4vw; 
+  font-size: 7vw;
+  border-color: black;
+  font-family: Inter;
+}
+
 /** cofiguração de texto da página linha do tempo e autoconhecimento (alguns)**/
 
 .textoLinhaDoTempo{
@@ -353,4 +362,20 @@ input[type="text"] {
     text-align: left;
     padding-top: 0vw;
     margin-top: 0vw;
+}
+
+.fonte{
+    font-size: 4vw;
+    text-decoration: underline;
+    color: blue;
+    padding-top: 0vw;
+    margin-top: 0vw;;
+    padding-bottom: 0vw;
+    
+}
+
+.fotosLinhaDoTempo{
+    width: 98vw;
+    height: 60vw;
+    display: block;
 }
