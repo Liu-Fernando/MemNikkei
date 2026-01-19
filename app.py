@@ -11,33 +11,36 @@ def home():
 def paginaInicial():
     return render_template("paginaInicial.html")
 
+#Relembrar Tradições
+@app.route("/linhaDoTempo")
+def linhaDoTempo():
+        return render_template("linhaDoTempo.html")
+
 #Páginas saúde Mental
+@app.route("/saudeMental")
+def saudeMental():
+        return render_template("saudeMental.html")
 
 @app.route("/saudeCerebral")
 def saudeCerebral():
         return render_template("saudeMental_Cerebral.html")
 
-@app.route("/saudeMental")
-def saudeMental():
-        return render_template("saudeMental.html")
-
-@app.route("/saudeAlzheimer")
+@app.route("/saudeMental/saudeAlzheimer")
 def saudeMental_Alzheimer():
         return render_template("saudeMental_Alzheimer.html")
 
 # botoes pagina minhas memorias
+@app.route("/minhasMemorias")
+def minhasMemorias():
+        return render_template("minhasMemorias.html")
 
-@app.route("/adicionarMemoria")
-def Adicionar_Memoria():
-        return render_template("adicionarMemoria.html")
-
-@app.route("/linhaDoTempo")
-def Linha_Do_Tempo():
-        return render_template("linhaDoTempo.html")
+@app.route("/minhasMemorias/adicionarMemoria")
+def minhasMemorias_adicionarMemoria():
+        return render_template("minhasMemorias_adicionarMemoria.html")
 
 @app.route("/minhaGaleria")
-def Minha_Galeria():
-        return render_template("minhaGaleria.html")
+def minhasMemorias_minhaGaleria():
+        return render_template("minhasMemorias_minhaGaleria.html")
 
 #Teste de template Universal no botão de Jogos cognitivos
 @app.route("/jogosCognitivos")
