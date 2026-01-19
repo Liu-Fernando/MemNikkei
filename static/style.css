@@ -136,35 +136,6 @@ a.btn{
     cursor: pointer;
 }
 
-/* formato geral da caixinha, sem cor, so a configuracao dela */
-.caixinha {
-    border-radius: 20px;
-    padding: 2vw;
-    gap: 20px;
-    display: flex;
-    margin-bottom: 6px;
-    margin-top: 6vw;
-    height: 38vw;
-    box-sizing: border-box;
-}
-
-/* a thumbnail do video */
-.thumbnail{
-    margin-right: 0vw;
-}
-
-/* formato geral do video*/
-.thumbnail img {
-    border-radius: 20px;
-    border-style: solid;
-    border-color: black;
-    height: 85%;
-    width: 91%;
-    margin-top: 2.5vw;
-    margin-bottom: 2.5vw;
-    margin-right: 4.5vw;
-}
-
 .nav-localizacao{
     display: flex;
     flex-direction: row;
@@ -172,47 +143,6 @@ a.btn{
     gap: 10px;
     margin-top: 2px;
     margin-bottom: 30px;
-}
-
-/* formato geral da div que vai ficar o titulo do video (que fica ao lado da foto do video) */
-.texto {
-    flex: 1;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-/* formato geral do texto que fica ao lado da foto do video */
-.texto p {
-    font-family: Inter;
-    color: white;
-    font-size: 6.5vw;
-    margin: 0;
-    font-weight: bold;
-    text-align: center;
-    padding-left: 5px;
-}
-
-/* formato geral do resumo que fica abaixo da div do video*/
-.resumoVideo p {
-    margin-top: 3px;
-    font-family: Inter;
-    font-size: 5.5vw;
-    text-align: center;
-}
-
-/* formato geral dos creditos (o mesmo credito sempre, com o nome da professora) */
-.creditosVideo{
-    margin-top: -5vw;
-}
-
-/* formato geral do paragrafo dos creditos */
-.creditosVideo p {
-    margin: 0;
-    font-family: Inter;
-    font-size: 4vw;
-    text-align: right;
-    padding: 5px;
 }
 
 .conteudo{
