@@ -22,3 +22,5 @@ Para atualizar versão
 $ cd MemNikkey
 $ git pull
 Reload fernandoliu.pythonanywhere.com
+
+.
