@@ -44,5 +44,7 @@ def Minha_Galeria():
 def jogosCognitivos():
         return render_template("saudeMental_templateUniversal.html")
 
+#rota solidao/ansiedade/depressão -> saudementaltemplateuniversal
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000, debug=True)
