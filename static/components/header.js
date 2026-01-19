@@ -8,10 +8,8 @@ headerTemplate.innerHTML = `
         color: #ffffff;
         font-size: 10vw;
         width: 100%;
-        margin-left: 0px;
-        /** fazer o header ficar grudadinho na tela **/
-        padding: 9px;
-        /** fazer o header ficar grudadinho na tela **/
+        
+        
         
        
         display:flex;
