@@ -11,33 +11,51 @@ def home():
 def paginaInicial():
     return render_template("paginaInicial.html")
 
-#Páginas saúde Mental
+##################################  RELEMBRAR TRADIÇÕES  ##############################
 
-@app.route("/saudeCerebral")
-def saudeCerebral():
-        return render_template("saudeMental_Cerebral.html")
+@app.route("/relembrarTradicoes")
+def relembrarTradicoes():
+        return render_template("relembrarTradicoes.html")
+@app.route("/linhaDoTempo")
+def linhaDoTempo():
+        return render_template("linhaDoTempo.html")
 
+##################################  MURAL DE HISTÓRIAS  ##############################
+@app.route("/muralDeHistorias")
+def muralDeHistorias():
+        return render_template("muralDeHistorias.html")
+##################################  MINHAS MEMÓRIASS  ##############################
+@app.route("/minhasMemorias")
+def minhasMemorias():
+        return render_template("minhasMemorias.html")
+
+@app.route("/minhasMemorias/adicionarMemoria")
+def minhasMemorias_adicionarMemoria():
+        return render_template("minhasMemorias_adicionarMemoria.html")
+
+@app.route("/minhasMemorias//minhaGaleria")
+def minhasMemorias_minhaGaleria():
+        return render_template("minhasMemorias_minhaGaleria.html")
+
+##################################  AUTOCONHECIMENTO  ##############################
+@app.route("/autoconhecimento")
+def autoconhecimento():
+        return render_template("autoconhecimento.html")
+
+##################################  SAÚDE MENTAL  ##############################
 @app.route("/saudeMental")
 def saudeMental():
         return render_template("saudeMental.html")
 
-@app.route("/saudeAlzheimer")
+@app.route("/saudeMental/saudeCerebral")
+def saudeCerebral():
+        return render_template("saudeMental_Cerebral.html")
+
+@app.route("/saudeMental/saudeAlzheimer")
 def saudeMental_Alzheimer():
         return render_template("saudeMental_Alzheimer.html")
 
-# botoes pagina minhas memorias
 
-@app.route("/adicionarMemoria")
-def Adicionar_Memoria():
-        return render_template("adicionarMemoria.html")
-
-@app.route("/linhaDoTempo")
-def Linha_Do_Tempo():
-        return render_template("linhaDoTempo.html")
-
-@app.route("/minhaGaleria")
-def Minha_Galeria():
-        return render_template("minhaGaleria.html")
 
 #Teste de template Universal no botão de Jogos cognitivos
 @app.route("/jogosCognitivos")
