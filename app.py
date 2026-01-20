@@ -42,7 +42,7 @@ def Minha_Galeria():
 #Teste de template Universal no botão de Jogos cognitivos
 @app.route("/jogosCognitivos")
 def jogosCognitivos():
-        return render_template("saudeMental_templateUniversal.html")
+        return render_template("saudeMental_templateUniversal.html",pagina = "solidao")
 
 #rota solidao/ansiedade/depressão -> saudementaltemplateuniversal
 

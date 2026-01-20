@@ -15,9 +15,7 @@ const paginasSaudeMental = {
 
 //config página
 const container = document.getElementById('container'); //pega a div do html que tem container
-const paginaAtualNormalizada = paginaAtual.slice(3,-3);
-console.log(paginaAtualNormalizada);
-const config = paginasSaudeMental[paginaAtualNormalizada]; //pega a config da página atual. Se a página atual é a de solidão, vai pegar o que tá nela
+const config = paginasSaudeMental[paginaAtual]; //pega a config da página atual. Se a página atual é a de solidão, vai pegar o que tá nela
 
 if (config && config.caixinhas) { //verifica se a página existe e se tem as caixinhas
     config.caixinhas.forEach(caixinha => { //para cada caixinha no array lá em cima, vai fazer executar isso aqui:
