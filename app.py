@@ -49,13 +49,15 @@ def saudeMental():
 
 @app.route("/saudeMental/saudeCerebral")
 def saudeCerebral():
-        return render_template("saudeMental_Cerebral.html")
+        return render_template("saudeMental_templateUniversal.html",pagina = "saudeCerebral")
 
 @app.route("/saudeMental/saudeAlzheimer")
 def saudeMental_Alzheimer():
         return render_template("saudeMental_Alzheimer.html")
 
-
+@app.route("/saudeMental/saudeSolidao")
+def saudeMental_Solidao():
+        return render_template("saudeMental_templateUniversal.html", pagina = "solidao")
 
 #Teste de template Universal no botão de Jogos cognitivos
 @app.route("/jogosCognitivos")
