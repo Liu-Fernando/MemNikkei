@@ -6,9 +6,11 @@ templates - todos HTML
 //Instruções para rodar o código
 Python 3.10 - Flask
 Clonar repositório
-Criar ambiente virtual
+Criar ambiente virtual 
+$ python -m venv /caminho/para/novo/ambiente/virtual
+ex: python -m venv C:\Users\Fernando Liu\Desktop\Programas\VSCode\MemNikkey\app.py
 Ativar ambiente virtual
-$ .\venv\Script\Activate
+$ .\venv\Scripts\activate
 $ pip install -r "requirements.txt"
 $ python app.py
 
