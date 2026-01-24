@@ -47,24 +47,25 @@ def autoconhecimento():
 def saudeMental():
         return render_template("saudeMental.html")
 
-@app.route("/saudeMental/saudeCerebral")
-def saudeCerebral():
-        return render_template("saudeMental_templateUniversal.html",pagina = "saudeCerebral")
-
-@app.route("/saudeMental/saudeAlzheimer")
-def saudeMental_Alzheimer():
-        return render_template("saudeMental_Alzheimer.html")
-
 @app.route("/saudeMental/saudeSolidao")
 def saudeMental_Solidao():
-        return render_template("saudeMental_templateUniversal.html", pagina = "solidao")
+        return render_template("saudeMental_templateUniversalPaginas.html", pagina = "solidao")
 
-#Teste de template Universal no botão de Jogos cognitivos
-@app.route("/jogosCognitivos")
-def jogosCognitivos():
-        return render_template("saudeMental_templateUniversal.html",pagina = "solidao")
+@app.route("/saudeMental/saudeHabitosSaudaveis")
+def saudeMental_HabitosSaudaveis():
+        return render_template("saudeMental_templateUniversalPaginas.html", pagina = "habitosSaudaveis")
 
-#rota solidao/ansiedade/depressão -> saudementaltemplateuniversal
+@app.route("/saudeMental/saudeDoencaDeAlzheimer")
+def saudeMental_DoencaDeAlzheimer():
+        return render_template("saudeMental_templateUniversalPaginas.html", pagina = "DoencaDeAlzheimer")
+
+@app.route("/saudeMental/saudeCerebral")
+def saudeMental_SaudeCerebral():
+        return render_template("saudeMental_templateUniversalPaginas.html",pagina = "saudeCerebral")
+
+@app.route("/saudeMental/saudeAutoconhecimento")
+def saudeMental_Autoconhecimento():
+        return render_template("saudeMental_templateUniversalPaginas.html", pagina = "autoconhecimento")
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000, debug=True)
