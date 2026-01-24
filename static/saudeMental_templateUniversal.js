@@ -3,8 +3,8 @@ const paginasSaudeMental = {
         caixinhas: [
             { 
                 cor: '#7c83a3',
-                título: 'Solidão adoece, amizade protege',
-                imagem: Thumbnail_prof_solidao_adoece_amizade_protege.png,
+                titulo: 'Solidão adoece, amizade protege',
+                imagem: "../static/Thumbnail_prof_solidao_adoece_amizade_protege.png",
                 textoDescritivoFoto: 'Duas mulheres posam sorrindo diante de um painel colorido de evento. À esquerda, a professora Dra. Deusivania Falcão veste um casaco escuro e mantém uma das mãos na cintura; à direita, Rosângela Marcondes usa óculos, camisa clara, calça estampada e jaqueta verde, também com a mão na cintura. Ambas estão lado a lado, demonstrando proximidade e alegria. Na parte inferior da imagem, lê-se a frase: “Solidão adoece, amizade protege”.',
                 resumo: '“Por que amizade não é luxo: é proteção contra solidão, depressão e até contra adoecimento?”',
                 creditos: 'Dra. Deusivania Falcão e Rosângela Marcondes'
