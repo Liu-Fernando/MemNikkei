@@ -23,6 +23,7 @@
     font-family: Inter;
     font-size: 5.5vw;
     text-align: center;
+    font-weight: 600;
 }
 
 /* formato geral dos creditos (o mesmo credito sempre, com o nome da professora) */
@@ -36,14 +37,15 @@
     font-family: Inter;
     font-size: 4vw;
     text-align: right;
-    padding: 5px;
+    padding: 3vw;
+    font-weight: 600;
 }
 
 /* formato geral da caixinha, sem cor, so a configuracao dela */
 .caixa {
     border-radius: 30px;
     padding: 2vw;
-    gap: 20px;
+    gap: 2vw; /* gap entre título e thumbnail */
     display: flex;
     margin-bottom: 6px;
     margin-top: 6vw;
@@ -53,7 +55,6 @@
 
 /* a thumbnail do video */
 .thumbnail{
-    margin-left: auto;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -61,10 +62,10 @@
 
 /* formato geral do video*/
 .thumbnail img {
-    border-radius: 20px;
+    border-radius: 6vw;
     border-style: solid;
     border-color: black;
-    height: 85%;
-    width: 91%;
+    height: 90%;
+    width: 100%;
     margin-right: 2vw;
 }

@@ -42,21 +42,27 @@ def minhasMemorias_minhaGaleria():
 def autoconhecimento():
         return render_template("autoconhecimento.html")
 
+##################################  JOGOS COGNITIVOS  ##############################
+@app.route("/jogosCognitivos")
+def jogosCognitivos():
+        return render_template("jogosCognitivos_PaginaInicial.html")
+
 ##################################  SAÚDE MENTAL  ##############################
 @app.route("/saudeMental")
 def saudeMental():
         return render_template("saudeMental.html")
 
-@app.route("/saudeMental/saudeSolidao")
-def saudeMental_Solidao():
+@app.route("/saudeMental/saudeSolidao") #(/o que vai aparecer na barra de pesquisa)
+def saudeMental_Solidao(): #definir uma função (mesmo nome que tá no url_for do HTML)
         return render_template("saudeMental_templateUniversalPaginas.html", pagina = "solidao")
+#carregar o template universal da página solidão (o container)
 
 @app.route("/saudeMental/saudeHabitosSaudaveis")
 def saudeMental_HabitosSaudaveis():
         return render_template("saudeMental_templateUniversalPaginas.html", pagina = "habitosSaudaveis")
 
 @app.route("/saudeMental/saudeDoencaDeAlzheimer")
-def saudeMental_DoencaDeAlzheimer():
+def saudeMental_DoencaDeAlzheimer(): 
         return render_template("saudeMental_templateUniversalPaginas.html", pagina = "DoencaDeAlzheimer")
 
 @app.route("/saudeMental/saudeCerebral")
