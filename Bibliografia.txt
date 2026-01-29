@@ -47,6 +47,12 @@ https://www.w3schools.com/tags/att_input_type_text.asp
 
 text area no JS https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea
 
+botar imagem como bullet na lista https://www.youtube.com/watch?v=vnU9j8jJRHQ e
+https://www.youtube.com/watch?v=iOTcepn3QRc 
+
+::before https://developer.mozilla.org/pt-BR/docs/Web/CSS/Reference/Selectors/::before
+
+como deixar em itálico https://www.w3schools.com/cssref/pr_font_font-style.php
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
