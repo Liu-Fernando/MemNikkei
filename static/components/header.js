@@ -32,7 +32,7 @@ headerTemplate.innerHTML = `
 </style>
     <header>
     <img src="../static/MemLogo.png " class="logoHeader" alt="Logo"> 
-        <a href="paginaInicial">Memórias Nikkei</a>
+        <a href="/paginaInicial">Memórias Nikkei</a>
         
     </header>
 
