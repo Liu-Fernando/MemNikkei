@@ -45,6 +45,7 @@ Como colocar um text box em html (para usuários conseguirem digitar)
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/text
 https://www.w3schools.com/tags/att_input_type_text.asp
 
+text area no JS https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea
 
 <!DOCTYPE html>
 <html lang="pt-br">

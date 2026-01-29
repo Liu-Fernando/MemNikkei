@@ -145,6 +145,7 @@ a.btn{
     margin-bottom: 30px;
 }
 
+/* section conteúdo da página */
 .conteudo{
     margin: 3vw;
 }
@@ -290,7 +291,7 @@ input:focus, textarea:focus {
 }
 
 
-/** cofiguração de texto da página linha do tempo e autoconhecimento (alguns)**/
+/** cofiguração de texto da página linha do tempo, autoconhecimento (alguns) e árvore da vida **/
 
 .textoLinhaDoTempo{
     font-size: 6vw;
@@ -354,4 +355,29 @@ input:focus, textarea:focus {
 .textoPerguntaMinhaJornada{
     font-size: 5vw;
     font-weight: bold;
+}
+
+/** CONFIGURAÇÕES PÁGINA ÁRVORE DA VIDA **/
+
+.arvoreRosa1{
+    width: 100%;
+    height: 100%;
+}
+
+/** PÁGINA IKIGAI **/
+
+.textoNormalIkigai{
+    font-size: 6vw;
+    padding-bottom: 0vw;
+    margin-top: 0vw;
+}
+
+li{
+    font-size: 5.7vw;
+    padding-bottom: 10vw;
+    font-weight: bold;
+}
+
+#itemCoracao{
+    list-style-image: url("coracao.png");
 }

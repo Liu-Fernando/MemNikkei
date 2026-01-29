@@ -42,6 +42,18 @@ def minhasMemorias_minhaGaleria():
 def autoconhecimento():
         return render_template("autoconhecimento.html")
 
+@app.route("/autoconhecimento/arvoreDaVida")
+def arvore_Da_Vida():
+        return render_template("arvoreDaVida.html")
+
+@app.route("/autoconhecimento/minhaJornada")
+def minha_Jornada():
+        return render_template("minhaJornada.html")
+
+@app.route("/autoconhecimento/ikigai")
+def ikigai():
+        return render_template("ikigai.html")
+
 ##################################  JOGOS COGNITIVOS  ##############################
 @app.route("/jogosCognitivos")
 def jogosCognitivos():
@@ -73,5 +85,7 @@ def saudeMental_SaudeCerebral():
 def saudeMental_Autoconhecimento():
         return render_template("saudeMental_templateUniversalPaginas.html", pagina = "autoconhecimento")
 
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000, debug=True)
+
