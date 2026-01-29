@@ -378,6 +378,20 @@ li{
     font-weight: bold;
 }
 
-#itemCoracao{
-    list-style-image: url("coracao.png");
+ul{
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+.textoItalico{
+    font-size: 6vw;
+    text-align:center; 
+    font-weight: bold; 
+    font-style:italic;
+    padding-bottom: 4vw;
+}
+
+.imagemIkigai{
+    height: 100%;
+    width: 100%;
 }
