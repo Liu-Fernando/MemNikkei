@@ -7,7 +7,7 @@
     <script src="../static/components/header.js" type = "text/javascript" ></script>
  
     
-    <title>Document</title> 
+    <title>Página Inicial</title> 
 </head>
 <body>
     <header-component></header-component>
@@ -15,11 +15,20 @@
 
     <section class="conteudo"> 
 
-        <p>Olá! <br> 
-        Bem-vindo(a) ao seu 
-        espaço de memórias e autoconhecimento! </p>
+        <!--<div class="paiDaImagem">
+            <p class="textoPaginaInicial">Olá! <br> 
+                Bem-vindo(a) ao seu 
+                espaço de memórias e autoconhecimento! 
+            </p>
+            <div class="imagemArvoreComGalho"> </div>
+        </div> !-->
 
-        <h2><strong>Por onde vamos começar?</strong></h2>
+        <p class="textoPaginaInicial">Olá! <br> 
+                Bem-vindo(a) ao seu 
+                espaço de memórias e autoconhecimento! 
+        </p>
+
+        <p class="textoPaginaInicial" style="font-weight: bold;">Por onde vamos começar?</p>
 
         <a href="{{ url_for('relembrarTradicoes') }}" class="btn"> Relembrar tradições</a> <br>
         <a href="{{ url_for('muralDeHistorias') }}" class="btn"> Mural de histórias</a> <br>

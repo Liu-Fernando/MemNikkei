@@ -156,6 +156,45 @@ body {
     font-family: Inter, Arial, sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
+}
+
+body::before { /* pseudo elemento */
+  content: ""; /*precisa para o ::before, mesmo vazio */
+  position: absolute; 
+  top: 0; 
+  right: 0; /* gruda o elemento na direita */
+  width: 100%;
+  height: 100%;
+  background-image: url('arvore_direita.png');
+  background-position: right 0vw top 10vh; /* direita sem margem + topo com margem */
+  background-repeat: no-repeat;
+  background-size: 30vw auto; /* largura 30vw, altura proporcional */
+  opacity: 0.6;
+  z-index: -1; /* atrás do conteúdo */
+  pointer-events: none; /* não faz nada quando o mouse passa */
+}
+
+body::after { /* pseudo elemento */
+  content: ""; /*precisa para o ::after, mesmo vazio */
+  position: absolute; 
+  bottom: 0; 
+  left: 0; /* gruda o elemento na esquerda */
+  width: 100%;
+  height: 100%;
+  background-image: url('imagemFundoGalho.png');
+  background-position: left 0vw bottom 5vh; /* esquerda sem margem + topo com margem */
+  background-repeat: no-repeat;
+  background-size: 30vw auto; /* largura 30vw, altura proporcional */
+  opacity: 0.6;
+  z-index: -1; /* atrás do conteúdo */
+  pointer-events: none; /* não faz nada quando o mouse passa */
+}
+
+/* primeiro texto da página inicial */
+.textoPaginaInicial{
+    font-size: 7vw;
+    margin-bottom: 0%;
 }
 
 /* titulo quase do mesmo tamanho que o paragrafo, mas em negrito (pagina minhas memorias)*/
