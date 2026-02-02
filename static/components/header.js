@@ -80,7 +80,7 @@ headerTemplate.innerHTML = `
 
     padding: 10px 15px;
     border-radius: 10px;
-    font-size: 8vw;
+    font-size: 7vw;
     font-weight: bold;
     text-align: center;
 
@@ -103,7 +103,7 @@ headerTemplate.innerHTML = `
     left: 0;
     width: 100%;
     height: 300vh;
-    background-color: rgb(226, 27, 27);
+    background-color: #ff8c88;
     justify-content: center;
     padding-top: 80px;
     overflow-y: auto;
