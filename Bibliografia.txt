@@ -53,6 +53,11 @@ https://www.youtube.com/watch?v=iOTcepn3QRc
 ::before https://developer.mozilla.org/pt-BR/docs/Web/CSS/Reference/Selectors/::before
 
 como deixar em itálico https://www.w3schools.com/cssref/pr_font_font-style.php
+
+background image https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-image
+
+background image opacidade https://www.youtube.com/watch?v=lRPguPbovro
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
