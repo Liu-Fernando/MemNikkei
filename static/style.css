@@ -82,26 +82,28 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 5%;
+    margin: 5% 0;
+    
 }
 
 .rodapeIni{
-    margin-top: 30px;
+    margin-top: 1%;
     padding: 20px;
-    font-size: 3px;
+    font-size: 3%;
+    text-align: center;
 }
 
-.icones_social{
-    display: felx;
+.icone_social{
+    display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px; 
+    align-items: center;
+    gap: 3vw;
 }
 
 .icone {
-    width: 15px;
-    height: auto;
+    width: 8vw;
+    height: 6vh;
     cursor: pointer;
 }
 
