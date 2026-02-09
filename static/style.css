@@ -198,10 +198,11 @@ body::after { /* pseudo elemento */
 }
 
 /* titulo quase do mesmo tamanho que o paragrafo, mas em negrito (pagina minhas memorias)*/
-#titulinho{
+.titulinho{
     padding-top: 10vw;
     padding-bottom: 0vw;
     margin: 4vw;
+    font-weight: bold;
 }
 
 /* paragrafo (pagina minhas memorias) */
@@ -433,4 +434,13 @@ ul{
 .imagemIkigai{
     height: 100%;
     width: 100%;
+}
+
+
+/** configurações jogos cognitivos **/
+
+.capaJogo{
+    height: 50vw;
+    width: 70vw;
+    background-color: blue;
 }
