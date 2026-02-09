@@ -69,3 +69,58 @@ background image opacidade https://www.youtube.com/watch?v=lRPguPbovro
     
 </body>
 </html>
+
+Conformidades ABNT
+    5.9 Formulários e entrada de dados
+        -5.9.1 Rótulo de campo – Requisito
+        -5.9.2 Rótulo de campo previsível – Requisito
+        -5.9.3 Rótulo de campo associado – Requisito
+        -5.9.4 Rótulo de campo descritivo – Requisito
+        -5.9.5 Textos de ajuda previsíveis – Requisito
+        -5.9.6 Campos relacionados – Requisito
+        -5.9.14 Botão de submissão – Recomendação
+    5.10 Apresentação
+        -5.10.1 Características sensoriais – Requisito
+        -5.10.2 Ordem de apresentação – Requisito
+        -5.10.3 Orientação de exibição – Requisito x
+        -5.10.4 Design responsivo – Requisito
+        -5.10.5 Área do indicador de foco visível – Recomendação
+    5.11 Uso de cores
+        -5.11.1 Uso de cores – Requisito
+        -5.11.2 Contraste para texto (aprimorado) – Recomendação    
+            -Todo conteúdo de texto, incluindo imagens de texto, tem relação de contraste de pelo menos 7:1
+            com o fundo; ou
+            — O conteúdo de texto está em tamanho grande e tem relação de contraste de pelo menos 4,5:1
+            com o fundo;
+        -5.11.4 Contraste para componentes – Requisito
+            — Todos os componentes de interface têm relação de contraste de pelo menos 3:1 com o fundo
+            e entre seus estados
+        -5.11.5 Contraste para objetos gráficos – Requisito ?
+        -5.11.6 Contraste para indicador de foco visível – Requisito ?
+    5.12 Conteúdo textual
+        -5.12.1 Espaçamento entre as linhas – Requisito
+            — Todos os blocos de texto têm espaçamento entre as linhas (entrelinhas) de pelo menos 1,5 vez
+            o tamanho da fonte;
+        -5.12.2 Espaçamento entre os parágrafos – Requisito
+            — Todos os parágrafos têm espaçamento entre si de pelo menos 2 vezes o tamanho da fonte
+        -5.12.3 Espaçamento entre as letras – Requisito
+            — Todos os blocos de texto têm espaçamento entre as letras (rastreamento) de pelo menos
+            0,12 vez o tamanho da fonte;
+        -5.12.4 Espaçamento entre as palavras – Requisito
+            — Todos os blocos de texto têm espaçamento entre as palavras de pelo menos 0,16 vez o tamanho
+            da fonte;
+        -5.12.5 Alinhamento de blocos de texto – Recomendação
+        -5.12.6 Largura de blocos de texto – Requisito
+            — A largura dos blocos de texto não ultrapassa 80 caracteres (40 caracteres, se o idioma for chinês,
+            japonês ou coreano); ou
+        -5.12.7 Texto redimensionado – Requisito
+    5.13 Codificação e marcação semântica
+        -5.13.1 Título da página – Requisito
+        -5.13.2 Idioma da página – Requisito
+        -5.13.3 Idioma das partes da página – Requisito
+        -5.13.5 Zoom não bloqueado – Requisito X
+        -5.13.6 Ordem de leitura – Requisito
+    5.14 Áudio e vídeo
+    5.15 Animação
+    5.16 Tempo
+        -5.16.1 Limite de tempo – Recomendação
