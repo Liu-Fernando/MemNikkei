@@ -414,15 +414,33 @@ input:focus, textarea:focus {
 }
 
 li{
+    list-style-image: url('coracao.png');
     font-size: 5.7vw;
     padding-bottom: 10vw;
     font-weight: bold;
+    
 }
-
 ul{
     padding-bottom: 0%;
     margin-bottom: 0%;
+    
 }
+
+ul li:nth-child(1) {
+    list-style-image: url('coracao.png');
+    height: 100px;
+    width: 100px;
+}
+ul li:nth-child(2) {
+    list-style-image: url('perfil.png');
+}
+ul li:nth-child(3) {
+    list-style-image: url('maoComPessoas.png');
+}
+ul li:nth-child(4) {
+    list-style-image: url('dinheiro.png');
+}
+
 
 .textoItalico{
     font-size: 6vw;

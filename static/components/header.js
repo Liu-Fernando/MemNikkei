@@ -2,6 +2,7 @@ const headerTemplate = document.createElement('template');
 
 headerTemplate.innerHTML = `
 <style>
+
     header {
         font-family: 'Noto Serif Japanese';
         background-color: #d52229;
@@ -117,6 +118,7 @@ headerTemplate.innerHTML = `
 
 </style>
     <header>
+        
         <div>
             <img src="../static/MemLogo.png " class="logoHeader" alt="Logo"> 
             <a href="/paginaInicial">Memórias Nikkei</a>
