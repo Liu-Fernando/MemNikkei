@@ -249,6 +249,7 @@ body::after { /* pseudo elemento */
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 0 auto;
 
     background-color: #1e497c;
@@ -448,11 +449,121 @@ ul{
     width: 100%;
 }
 
-
-/** configurações jogos cognitivos **/
+/** JOGOS COGNITIVOS **/
 
 .capaJogo{
-    height: 50vw;
-    width: 70vw;
-    background-color: blue;
+    height: 20vw;
+    width: 91vw;
+    border-style: solid;
+    border-width: 1vw;
+    border-color: #1e2a38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloJogo{
+    height: 20vw;
+    width: 93vw;
+    background-color: #1e2a38;
+    margin-bottom: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.capaJogo p {
+    font-family: Inter;
+    font-size: 9vw;
+    color: black;
+    margin-bottom: 0; 
+    padding-bottom: 0;
+}
+
+.tituloJogo p {
+    font-family: Inter;
+    font-size: 7.5vw;
+    color: white;
+    margin-top: 8vw; 
+    padding-top: 0;
+    font-weight: bold;
+}
+
+/** MURAL DE HISTÓRIAS **/
+
+/** só para demosntração para apresentar para Regina, depois é pra gente repensar **/
+.balaoChatDireita1{
+    height: 30vw;
+    width: 80vw;
+    background-color: #5170ff;
+    left: 0;
+    color: white;
+    border-radius: 8vw;
+    margin-bottom: 6vw;
+    display: flex;
+}
+
+.balaoChatEsquerda{
+    height: 30vw;
+    width: 60vw;
+    background-color: #b33e3e;
+    margin-left: auto;
+    color: white;
+    border-radius: 8vw;
+    margin-bottom: 6vw;
+    margin-right: 3vw;
+    display: flex;
+}
+
+.fraseBalao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.balaoChatDireita2{
+    height: 30vw;
+    width: 60vw;
+    background-color: #5170ff;
+    left: 0;
+    color: white;
+    border-radius: 8vw;
+    margin-bottom: 6vw;
+    display: flex;
+}
+
+
+/** RELEMBRAR TRADIÇÕES **/
+
+.balaoRTEsquerdo{
+    height: 30vw;
+    width: 60vw;
+    background-color: #1e497c;
+    left: 0;
+    color: white;
+    margin-bottom: 6vw;
+    display: flex;
+}
+
+.balaoRTDireita{
+    height: 30vw;
+    width: 60vw;
+    background-color: #1b2f47;
+    margin-left: auto;
+    color: white;
+    margin-bottom: 6vw;
+    margin-left: auto;
+    display: flex;
+}
+
+.balaoRTEsquerdo, .balaoRTDireita{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 7vw;
+    text-align: center;
+    font-weight: bold;
 }
