@@ -16,57 +16,67 @@
     <section class = "conteudo" > 
     <h2 id = "titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir uma fotos de cada vez. </h2>
 
-    <a href = "Selecionar_Arquivo" class = "BotaoAzulClaro" > Selecionar Arquivo </a>
+    <form>
 
-    <div class = "textBox"> 
+        <div class="BotaoAzulClaro" id="uploadArquivos"> Selecionar arquivo
+            <input
+            type="file"
+            id="selecionarArquivos"
+            name="selecionarArquivos"
+            >
+        </div>
 
-        <label for="tituloMemoria">Título da memória: </label>
-        <input 
-            type="text" 
-            id="tituloMemoria" 
-            name="tituloMemoria"
-            minlength="5"
-            maxlength="100"
-            size="10"
-            placeholder="Digite o título da memória"
-        ><br><br>
+        <div class = "textBox"> 
 
-        <label for="dataMemoria">Data da memória: </label>
-        <input
-            type="date" 
-            id="dataMemoria" 
-            name="dataMemoria"
-            placeholder="dd/mm/aaaa"
-            required
-        ><br><br>
+            <label for="tituloMemoria">Título da memória: </label>
+            <input 
+                type="text" 
+                id="tituloMemoria" 
+                name="tituloMemoria"
+                minlength="5"
+                maxlength="100"
+                size="10"
+                placeholder="Digite o título da memória"
+            ><br><br>
 
-        <script>
-        document.getElementById('dataMemoria').max = new Date().toISOString().split('T')[0];
-        </script>
+            <label for="dataMemoria">Data da memória: </label>
+            <input
+                type="date" 
+                id="dataMemoria" 
+                name="dataMemoria"
+                placeholder="dd/mm/aaaa"
+                required
+            ><br><br>
 
-        <label for="localMemoria">Local da memória: </label>
-        <input
-            type="text" 
-            id="localMemoria" 
-            name="localMemoria"
-            minlength="5"
-            maxlength="30"
-            size="10"
-            placeholder="Digite o local da memória"
-        ><br><br>
+            <script>
+            document.getElementById('dataMemoria').max = new Date().toISOString().split('T')[0];
+            </script>
 
-        <label for="descricao"> Descrição da memória: </label>
-        <textarea
-            id="descricao" 
-            name="descricao"
-            minlength="5"
-            maxlength="400"
-            placeholder="Descreva esta memória"
-        ></textarea><br><br>
+            <label for="localMemoria">Local da memória: </label>
+            <input
+                type="text" 
+                id="localMemoria" 
+                name="localMemoria"
+                minlength="5"
+                maxlength="30"
+                size="10"
+                placeholder="Digite o local da memória"
+            ><br><br>
 
-        <input type="submit" value="Enviar">
+            <label for="descricao"> Descrição da memória: </label>
+            <textarea
+                id="descricao" 
+                name="descricao"
+                minlength="5"
+                maxlength="400"
+                placeholder="Descreva esta memória"
+            ></textarea><br><br>
 
-    </div>
+            <input type="submit" value="Enviar">
+
+        </div>
+
+    </form>
 
     <!-- Temos que ver como vamos lidar com o recebimento dos nomes dos arquivos -->
     </section>
