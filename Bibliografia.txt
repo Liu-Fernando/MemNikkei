@@ -58,6 +58,8 @@ background image https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Prop
 
 background image opacidade https://www.youtube.com/watch?v=lRPguPbovro
 
+estilizar input file https://www.youtube.com/watch?v=jbm-ieId-ng
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

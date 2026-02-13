@@ -254,7 +254,7 @@ body::after { /* pseudo elemento */
     background-color: #1e497c;
     color: white;
 
-    padding: 10px 15px;
+    padding: 2vw 8vw;
     border-radius: 15vw;
     font-size: 8vw;
     font-weight: bold;
@@ -304,6 +304,16 @@ input[type="text"] {
   font-size: 7vw;
   border-color: black;
   font-family: Inter;
+}
+
+#uploadArquivos{
+    position: relative;
+}
+
+input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
 }
 
 /** input da descrição. Precisa de mais espaço para a pessoa enxergar o que está escrevendo**/
