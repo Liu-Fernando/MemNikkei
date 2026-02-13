@@ -60,6 +60,8 @@ background image opacidade https://www.youtube.com/watch?v=lRPguPbovro
 
 estilizar input file https://www.youtube.com/watch?v=jbm-ieId-ng
 
+site para ícones https://fonts.google.com/icons?icon.size=24&icon.color=%23e3e3e3
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
