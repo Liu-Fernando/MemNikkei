@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../../static/style.css">
+    <script src="../../static/components/header.js" type = "text/javascript" ></script>
+ 
+    
+    <title>Relembrar tradições</title> 
+</head>
+
+
+
+<body>
+    <header-component></header-component>
+
+    <section class="conteudo"> 
+
+        <p class="destaque" style="padding-bottom: 0;"> Relembrar tradições </p>
+
+        <p style="padding-top: 0; margin-top:0"> Clique em um dos temas abaixo para relembrar sobre a cultura nipobrasileira e elementos do Japão: </p>
+
+        <div class="btnEsquerdaImgDireita">
+            <a href="{{ url_for('linhaDoTempoHistorica') }}" class="balaoRTEsquerdo"> Linha do tempo histórica </a>
+            <img class="iconeRT" src="../../static/relogio.png" alt="ícone de relógio">
+        </div>
+
+        <div class="btnDireitaImgEsquerda">
+            <img class="iconeRT" src="../../static/ramen.png" alt="ícone de ramen">
+            <a href="{{ url_for('culinariaEGastronomia') }}" class="balaoRTDireita"> Culinária e gastronomia </a>
+        </div>
+
+        <div class="btnEsquerdaImgDireita">
+            <a class="balaoRTEsquerdo"> Tradições e celebrações </a>
+            <img class="iconeRT" src="../../static/leque.png" alt="ícone de leque">
+        </div>
+
+        <div class="btnDireitaImgEsquerda">
+            <img class="iconeRT" src="../../static/portal.png" alt="ícone de portal japonês">
+            <a class="balaoRTDireita"> Espaços e arquitetura </a>
+        </div>
+
+        <div class="btnEsquerdaImgDireita">
+            <a class="balaoRTEsquerdo"> Objetos cotidianos </a>
+            <img class="iconeRT" src="../../static/gatinho.png" alt="ícone de gato da sorte japonês">
+        </div>
+
+        <div class="btnDireitaImgEsquerda">
+            <img class="iconeRT" src="../../static/notaMusica.png" alt="ícone de nota de música">
+            <a class="balaoRTDireita"> Músicas, sons e danças </a>
+        </div>
+
+        <div class="btnEsquerdaImgDireita">
+            <a class="balaoRTEsquerdo"> Esportes e conquistas </a>
+            <img class="iconeRT" src="../../static/bandeiraJapao.png" alt="ícone da bandeira do Japão">
+        </div>
+
+    </section>
+
+</body>

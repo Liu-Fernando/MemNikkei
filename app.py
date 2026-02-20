@@ -15,19 +15,32 @@ def paginaInicial():
 
 @app.route("/relembrarTradicoes")
 def relembrarTradicoes():
-        return render_template("relembrarTradicoes.html")
-@app.route("/linhaDoTempo")
-def linhaDoTempo():
-        return render_template("linhaDoTempo.html")
+        return render_template("RelembrarTradicoes/relembrarTradicoes.html")
+
+######################  CULINÁRIA E GASTRONOMIA  #####################
+
+@app.route("/relembrarTradicoes/linhaDoTempoHistorica")
+def linhaDoTempoHistorica():
+        return render_template("RelembrarTradicoes/linhaDoTempoHistorica.html")
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia")
+def culinariaEGastronomia():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/culinariaEGastronomia.html")
+
 
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
 def muralDeHistorias():
         return render_template("muralDeHistorias.html")
+
 ##################################  MINHAS MEMÓRIASS  ##############################
 @app.route("/minhasMemorias")
 def minhasMemorias():
         return render_template("minhasMemorias.html")
+
+@app.route("/linhaDoTempo")
+def linhaDoTempo():
+        return render_template("linhaDoTempo.html")
 
 @app.route("/minhasMemorias/adicionarMemoria")
 def minhasMemorias_adicionarMemoria():

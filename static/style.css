@@ -539,31 +539,34 @@ ul{
 /** RELEMBRAR TRADIÇÕES **/
 
 .balaoRTEsquerdo{
-    height: 30vw;
-    width: 60vw;
     background-color: #1e497c;
     left: 0;
-    color: white;
-    margin-bottom: 6vw;
-    display: flex;
 }
 
 .balaoRTDireita{
-    height: 30vw;
-    width: 60vw;
     background-color: #1b2f47;
     margin-left: auto;
-    color: white;
-    margin-bottom: 6vw;
-    margin-left: auto;
-    display: flex;
 }
 
 .balaoRTEsquerdo, .balaoRTDireita{
+    height: 30vw;
+    width: 60vw;
     justify-content: center;
-    display: flex;
     align-items: center;
     font-size: 7vw;
     text-align: center;
     font-weight: bold;
+    color: white;
+    margin-bottom: 13vw;
+    display: flex;
+}
+
+.btnEsquerdaImgDireita, .btnDireitaImgEsquerda{
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconeRT{
+    height: 25%;
+    width: 25%;
 }

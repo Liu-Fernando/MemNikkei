@@ -60,7 +60,8 @@ background image opacidade https://www.youtube.com/watch?v=lRPguPbovro
 
 estilizar input file https://www.youtube.com/watch?v=jbm-ieId-ng
 
-site para ícones https://fonts.google.com/icons?icon.size=24&icon.color=%23e3e3e3
+site para ícones https://fonts.google.com/icons?icon.size=24&icon.color=%23e3e3e3 e 
+https://www.freepik.com/icon/japan_10680903#fromView=search&page=1&position=18&uuid=f0f1c8bf-6389-4698-95ee-55bc114ebabc
 
 <!DOCTYPE html>
 <html lang="pt-br">
