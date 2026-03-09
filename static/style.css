@@ -570,3 +570,33 @@ ul{
     height: 25%;
     width: 25%;
 }
+
+/* configurações para as opções dentro do relembrar tradições */
+
+.textoDentroOpcoesRT{
+    font-size: 6vw;
+    margin-top: 3vw;
+    margin-bottom: 0vw;
+    padding-top: 3vw;
+    padding-bottom: 0vw;
+}
+
+.botoesDentroOpcoesRT{
+    all: unset;
+    box-sizing: border-box;
+
+    font-family: Inter;
+    width: 88vw;
+    height: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw auto 0vw auto;
+
+    background-color: #1e2a38;
+    color: white;
+
+    font-size: 7vw;
+    font-weight: bold;
+    text-align: center;
+}
