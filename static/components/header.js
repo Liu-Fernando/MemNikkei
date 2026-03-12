@@ -118,7 +118,7 @@ headerTemplate.innerHTML = `
 </style>
     <header>
         <div>
-            <img src="../static/MemLogo.png " class="logoHeader" alt="Logo"> 
+            <img src="../../../static/MemLogo.png " class="logoHeader" alt="Logo"> 
             <a href="/paginaInicial">Memórias Nikkei</a>
         </div>
         <button class="menu-button">☰</button>
