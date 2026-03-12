@@ -120,7 +120,6 @@ if (config && config.caixinhas) { //verifica se a página existe e se tem as cai
         const divCaixa = document.createElement('div'); //cria um elemento div
         divCaixa.className = 'caixa'; //adiciona uma classe a essa div criada
         divCaixa.style.backgroundColor = caixinha.cor; //bota uma cor na caixa (a cor definida no array)
-        divCaixa.style.cursor = 'pointer'; //para o cursor mudar quando aproximar da div 
         divCaixa.onclick = function() { //função para a gente clicar
             window.location.href = caixinha.link; //pega o link no array
         }

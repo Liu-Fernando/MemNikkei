@@ -27,6 +27,16 @@ def linhaDoTempoHistorica():
 def culinariaEGastronomia():
         return render_template("RelembrarTradicoes/CulinariaEGastronomia/culinariaEGastronomia.html")
 
+################ PREPARAÇÃO DE PRATOS TRADICIONAIS ######################
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia/preparacaoDePratosTradicionais")
+def preparacaoPratosTradicionais():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/preparacaoPratosTradicionais.html")
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia/preparacaoDePratosTradicionais/sushi")
+def comida_Sushi():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "sushi")
+
 
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
