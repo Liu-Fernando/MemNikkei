@@ -157,6 +157,34 @@ const paginasComidasEReceitas = {
                 ]
             }
         ]
+    },
+    manju: {
+        comida: [
+            {
+                nome: "Receita básica - Manju",
+                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
+                descricaoImagem: "", //MUDAR ISSO AQUI
+                textoIngredientes: "Ingredientes",
+                ingredientes: [
+                    "2 xícaras de arroz japonês",
+                    "2 ½ xícaras de água"
+                ],
+                textoModoDePreparo: "Modo de preparo:",
+                modoDePreparo: [
+                    "Lave bem o arroz.",
+                    "Deixe descansar 15 minutos na água.",
+                    "Cozinhe até secar.",
+                    "Descanse 10 minutos antes de servir."
+                ],
+                sobreAComida: "Base da alimentação japonesa. Representa sustento e simplicidade.",
+                textoRecordarMemorias: "Para recordar memórias",
+                perguntas: [
+                    "Quem preparava esse prato na sua casa?",
+                    "Você ajudava na cozinha?",
+                    "Em quais ocasiões ele era servido?"
+                ]
+            }
+        ]
     }
 }
 

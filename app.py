@@ -53,6 +53,16 @@ def comida_Onigiri():
 def comida_Gohan():
         return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "gohan")
 
+################ DOCES E SOBREMESAS ######################
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia/docesESobremesasTipicas")
+def docesESobremesasTipicas():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/docesESobremesasTipicas.html")
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia/preparacaoDePratosTradicionais/gohan")
+def comida_Manju():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "gohan")
+
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
 def muralDeHistorias():
