@@ -185,7 +185,7 @@ body::after { /* pseudo elemento */
   width: 100%;
   height: 100%;
   background-image: url('imagemFundoGalho.png');
-  background-position: left 0vw bottom 5vh; /* esquerda sem margem + topo com margem */
+  background-position: left 0vw bottom 0vh; /* esquerda sem margem + topo com margem */
   background-repeat: no-repeat;
   background-size: 30vw auto; /* largura 30vw, altura proporcional */
   opacity: 0.6;
