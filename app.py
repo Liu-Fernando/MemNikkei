@@ -59,9 +59,31 @@ def comida_Gohan():
 def docesESobremesasTipicas():
         return render_template("RelembrarTradicoes/CulinariaEGastronomia/docesESobremesasTipicas.html")
 
-@app.route("/relembrarTradicoes/culinariaEGastronomia/preparacaoDePratosTradicionais/gohan")
+@app.route("/relembrarTradicoes/culinariaEGastronomia/docesESobremesasTipicas/manju")
 def comida_Manju():
-        return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "gohan")
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "manju")
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia/docesESobremesasTipicas/dorayaki")
+def comida_Dorayaki():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "dorayaki")
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia/docesESobremesasTipicas/yokan")
+def comida_Yokan():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "yokan")
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia/docesESobremesasTipicas/mochi")
+def comida_Mochi():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "mochi")
+
+@app.route("/relembrarTradicoes/culinariaEGastronomia/docesESobremesasTipicas/anko")
+def comida_Anko():
+        return render_template("RelembrarTradicoes/CulinariaEGastronomia/comidasTemplateUniversal.html", pagina = "anko")
+
+################ TRADIÇÕES E CELEBRAÇÕES ######################
+
+@app.route("/relembrarTradicoes/tradicoesECelebracoes")
+def tradicoesECelebracoes():
+        return render_template("RelembrarTradicoes/TradicoesECelebracoes/tradicoesECelebracoes.html")
 
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
