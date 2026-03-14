@@ -95,7 +95,6 @@ const paginasComidasEReceitas = {
                     "Quem preparava esse prato na sua casa?",
                     "Você ajudava na cozinha?",
                     "Em quais ocasiões ele era servido?"
-
                 ]
             }
         ]
@@ -166,22 +165,159 @@ const paginasComidasEReceitas = {
                 descricaoImagem: "", //MUDAR ISSO AQUI
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
-                    "2 xícaras de arroz japonês",
-                    "2 ½ xícaras de água"
+                    "2 xícaras de farinha de trigo",
+                    "½ xícara de açúcar",
+                    "1 colher (chá) de fermento em pó",
+                    "½ xícara de leite",
+                    "1 colher (sopa) de óleo"
                 ],
                 textoModoDePreparo: "Modo de preparo:",
                 modoDePreparo: [
-                    "Lave bem o arroz.",
-                    "Deixe descansar 15 minutos na água.",
-                    "Cozinhe até secar.",
-                    "Descanse 10 minutos antes de servir."
+                    "Misture os ingredientes da massa até formar uma textura macia.",
+                    "Divida em pequenas porções.",
+                    "Abra cada porção na mão e coloque uma colher de anko.",
+                    "Feche formando uma bolinha.",
+                    "Cozinhe no vapor por cerca de 15 minutos"
                 ],
-                sobreAComida: "Base da alimentação japonesa. Representa sustento e simplicidade.",
+                sobreAComida: "Os doces japoneses não são apenas sobremesas são símbolos de celebração, estações do ano e encontros familiares.",
                 textoRecordarMemorias: "Para recordar memórias",
                 perguntas: [
-                    "Quem preparava esse prato na sua casa?",
-                    "Você ajudava na cozinha?",
-                    "Em quais ocasiões ele era servido?"
+                    "Você comia esses doces em festivais?",
+                    "Qual era o seu preferido?",
+                    "Algum deles era feito em casa?"
+                ]
+            }
+        ]
+    },
+    dorayaki: {
+        comida: [
+            {
+                nome: "Receita básica - Dorayaki",
+                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
+                descricaoImagem: "", //MUDAR ISSO AQUI
+                textoIngredientes: "Ingredientes",
+                ingredientes: [
+                    "2 ovos",
+                    "½ xícara de açúcar",
+                    "1 colher (sopa) de mel",
+                    "1 xícara de farinha de trigo",
+                    "½ colher (chá) de fermento",
+                    "2 colheres (sopa) de água",
+                    "Anko para rechear"
+                ],
+                textoModoDePreparo: "Modo de preparo:",
+                modoDePreparo: [
+                    "Bata ovos e açúcar até clarear.",
+                    "Acrescente mel.",
+                    "Incorpore farinha e fermento.",
+                    "Adicione água até formar massa cremosa.",
+                    "Faça discos em frigideira antiaderente.",
+                    "Recheie com anko e una dois discos."
+                ],
+                sobreAComida: "Os doces japoneses não são apenas sobremesas são símbolos de celebração, estações do ano e encontros familiares.",
+                textoRecordarMemorias: "Para recordar memórias",
+                perguntas: [
+                    "Você comia esses doces em festivais?",
+                    "Qual era o seu preferido?",
+                    "Algum deles era feito em casa?"
+                ]
+            }
+        ]
+    },
+    yokan: {
+        comida: [
+            {
+                nome: "Receita básica - Yokan simples",
+                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
+                descricaoImagem: "", //MUDAR ISSO AQUI
+                textoIngredientes: "Ingredientes",
+                ingredientes: [
+                    "2 xícaras de anko",
+                    "1 colher (sopa) de ágar-ágar em pó",
+                    "1 xícara de água",
+                    "3 colheres (sopa) de açúcar"
+                ],
+                textoModoDePreparo: "Modo de preparo:",
+                modoDePreparo: [
+                    "Dissolva o ágar-ágar na água e leve ao fogo.",
+                    "Dissolva o ágar-ágar na água e leve ao fogo.",
+                    "Acrescente açúcar e anko.",
+                    "Mexa até engrossar.",
+                    "Despeje em forma retangular.",
+                    "Leve à geladeira até firmar.",
+                    "Corte em blocos."
+                ],
+                sobreAComida: "Doce firme à base de anko e ágar-ágar. Muito associado à tradição, cerimônias e presentes formais. Sua textura lembra uma gelatina densa e elegante.",
+                textoRecordarMemorias: "Para recordar memórias",
+                perguntas: [
+                    "Era servido em ocasiões especiais?",
+                    "Você gostava da textura firme?",
+                    "Alguém cortava em fatias delicadas para servir?"
+                ]
+            }
+        ]
+    },
+    mochi: {
+        comida: [
+            {
+                nome: "Receita básica - Mochi simples",
+                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
+                descricaoImagem: "", //MUDAR ISSO AQUI
+                textoIngredientes: "Ingredientes",
+                ingredientes: [
+                    "2 xícaras de arroz glutinoso",
+                    "Água",
+                    "Amido de milho para polvilhar"
+                ],
+                textoModoDePreparo: "Modo de preparo:",
+                modoDePreparo: [
+                    "Deixe o arroz de molho por 8 horas.",
+                    "Cozinhe no vapor até ficar macio.",
+                    "Amasse ainda quente até formar massa elástica.",
+                    "Modele bolinhas com as mãos polvilhadas com amido.",
+                    "Versão simples alternativa:",
+                    "Utilizar farinha de arroz glutinoso (mochiko), água e açúcar, cozinhando no micro-ondas até formar massa elástica."
+                ],
+                textoVersaoAlterantiva: "Versão alternativa",
+                versaoAlternativa: [
+                    "Utilizar farinha de arroz glutinoso (mochiko), água e açúcar, cozinhando no micro-ondas até formar massa elástica."
+                ],
+                sobreAComida: "Feito de arroz glutinoso, o mochi simboliza prosperidade e união, especialmente no Ano Novo japonês. Nas comunidades nikkeis, o preparo coletivo do mochi (mochitsuki) era um momento de confraternização.",
+                textoRecordarMemorias: "Para recordar memórias",
+                perguntas: [
+                    "Você já participou do preparo de mochi?",
+                    "Lembra do ritual de bater o arroz?",
+                    "Era servido com açúcar, kinako ou recheado?",
+                ]
+            }
+        ]
+    },
+    anko: {
+        comida: [
+            {
+                nome: "Receita básica - Anko",
+                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
+                descricaoImagem: "", //MUDAR ISSO AQUI
+                textoIngredientes: "Ingredientes",
+                ingredientes: [
+                    "1 xícara de feijão azuki",
+                    "3 xícaras de água",
+                    "½ a 1 xícara de açúcar"
+                ],
+                textoModoDePreparo: "Modo de preparo:",
+                modoDePreparo: [
+                    "Lave e cozinhe o feijão até ficar macio.",
+                    "Escorra e volte à panela.",
+                    "Acrescente açúcar.",
+                    "Cozinhe mexendo até engrossar.",
+                    "Amasse parcialmente ou completamente."
+                ],
+                sobreAComida: "Feito de arroz glutinoso, o mochi simboliza prosperidade e união, especialmente no Ano Novo japonês. Nas comunidades nikkeis, o preparo coletivo do mochi (mochitsuki) era um momento de confraternização.",
+                textoRecordarMemorias: "Para recordar memórias",
+                perguntas: [
+                    "Você já participou do preparo de mochi?",
+                    "Lembra do ritual de bater o arroz?",
+                    "Era servido com açúcar, kinako ou recheado?",
                 ]
             }
         ]
@@ -229,9 +365,13 @@ if (configuracao && configuracao.comida) { //verifica se a página existe e se t
         sobreAComida.className = 'sobreAComida';
         sobreAComida.textContent = comida.sobreAComida;
 
+        const div = document.createElement('p');
+        div.className = 'divBranca';
+        
         const textoRecordarMemorias = document.createElement('p');
         textoRecordarMemorias.className = 'textoRecordarMemorias'
         textoRecordarMemorias.textContent = comida.textoRecordarMemorias;
+        div.appendChild(textoRecordarMemorias);
 
         const ul2 = document.createElement('ul');
         comida.perguntas.forEach(item => {
@@ -239,6 +379,7 @@ if (configuracao && configuracao.comida) { //verifica se a página existe e se t
             itemLista.textContent = item;
             ul2.appendChild(itemLista);
         });
+        div.appendChild(ul2);
 
         container.appendChild(paragrafoNomeComida);
         container.appendChild(img);
@@ -246,9 +387,28 @@ if (configuracao && configuracao.comida) { //verifica se a página existe e se t
         container.appendChild(ul);
         container.appendChild(textoModoDePreparo);
         container.appendChild(ol);
+
+        // NÃO APARECE EM TODAS AS RECEITAS
+        if (comida.textoVersaoAlterantiva) {
+            const textoVersaoAlterantiva = document.createElement('p');
+            textoVersaoAlterantiva.className = 'textoVersaoAlternativa';
+            textoVersaoAlterantiva.textContent = comida.textoVersaoAlterantiva;
+            container.appendChild(textoVersaoAlterantiva);
+        }
+
+        // NÃO APARECE EM TODAS AS RECEITAS
+        if (comida.versaoAlternativa) {
+            const ol2 = document.createElement('ol');
+            comida.versaoAlternativa.forEach(item => {
+                const itemLista = document.createElement('li');
+                itemLista.textContent = item;
+                ol2.appendChild(itemLista);
+            });
+            container.appendChild(ol2);
+        }
+
         container.appendChild(sobreAComida);
-        container.appendChild(textoRecordarMemorias);
-        container.appendChild(ul2);
+        container.appendChild(div);
     }
     )
 }
