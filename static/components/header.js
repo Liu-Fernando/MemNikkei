@@ -88,6 +88,11 @@ headerTemplate.innerHTML = `
     cursor: pointer;
     }
 
+    a.btn-menu{
+    width: 80vw;
+    height: 12vh;
+}
+
     .close-menu-button{
         top: 20px;
         right: 20px;
@@ -126,14 +131,14 @@ headerTemplate.innerHTML = `
         <nav class="nav-menu">
             <button class="close-menu-button">←</button>
             <ul>
-                <li><a href="" class="btn">Voltar ao menu inicial</a></li>
-                <li><a href="" class="btn">Relembrar tradições</a></li>
-                <li><a href="" class="btn">Mural de histórias</a></li>
-                <li><a href="" class="btn">Minhas memórias</a></li>
-                <li><a href="" class="btn">Autoconhecimento</a></li>
-                <li><a href="" class="btn">Saúde mental e Longevidade</a></li>
-                <li><a href="" class="btn">Jogos cognitivos</a></li>
-                <li><a href="" class="btn">Conheça o projeto</a></li>
+                <li><a href="" class="btn btn-menu">Voltar ao menu inicial</a></li>
+                <li><a href="" class="btn btn-menu">Relembrar tradições</a></li>
+                <li><a href="" class="btn btn-menu">Mural de histórias</a></li>
+                <li><a href="" class="btn btn-menu">Minhas memórias</a></li>
+                <li><a href="" class="btn btn-menu">Autoconhecimento</a></li>
+                <li><a href="" class="btn btn-menu">Saúde mental e Longevidade</a></li>
+                <li><a href="" class="btn btn-menu">Jogos cognitivos</a></li>
+                <li><a href="" class="btn btn-menu">Conheça o projeto</a></li>
             </ul>
         </nav>
     </header>
