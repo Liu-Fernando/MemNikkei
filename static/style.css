@@ -138,6 +138,11 @@ a.btn{
     cursor: pointer;
 }
 
+.btn-voltar{
+    width: 18vw;
+    height: 7vh;
+}
+
 .nav-localizacao{
     display: flex;
     flex-direction: row;

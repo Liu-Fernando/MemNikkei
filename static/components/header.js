@@ -53,8 +53,8 @@ headerTemplate.innerHTML = `
         position: absolute;
         top: 20px;
         left: 35px;
-        width: 20vw;
-        height: 7vh;
+        width: 19vw;
+        height: 6vh;
         cursor: pointer;
     }
 
@@ -91,7 +91,7 @@ headerTemplate.innerHTML = `
     a.btn-menu{
     width: 80vw;
     height: 12vh;
-}
+    }
 
     .close-menu-button{
         top: 20px;
@@ -107,13 +107,19 @@ headerTemplate.innerHTML = `
     top: 100%;
     left: 0;
     width: 100%;
-    height: 300vh;
+    height: 100vh;
     background-color: #ff8c88;
-    justify-content: center;
-    padding-top: 80px;
+
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction:column;
+    padding-top: 65px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    max-height: 100vh;
+    max-height: 85vh;
     }
 
     .nav-menu.active{
@@ -123,7 +129,7 @@ headerTemplate.innerHTML = `
 </style>
     <header>
         <div>
-            <img src="../../../static/MemLogo.png " class="logoHeader" alt="Logo"> 
+            <img src="/static/MemLogo.png " class="logoHeader" alt="Logo"> 
             <a href="/paginaInicial">Memórias Nikkei</a>
         </div>
         <button class="menu-button">☰</button>
@@ -131,13 +137,13 @@ headerTemplate.innerHTML = `
         <nav class="nav-menu">
             <button class="close-menu-button">←</button>
             <ul>
-                <li><a href="" class="btn btn-menu">Voltar ao menu inicial</a></li>
-                <li><a href="" class="btn btn-menu">Relembrar tradições</a></li>
-                <li><a href="" class="btn btn-menu">Mural de histórias</a></li>
-                <li><a href="" class="btn btn-menu">Minhas memórias</a></li>
-                <li><a href="" class="btn btn-menu">Autoconhecimento</a></li>
-                <li><a href="" class="btn btn-menu">Saúde mental e Longevidade</a></li>
-                <li><a href="" class="btn btn-menu">Jogos cognitivos</a></li>
+                <li><a href="/paginaInicial" class="btn btn-menu">Voltar ao menu inicial</a></li>
+                <li><a href="/relembrarTradicoes" class="btn btn-menu">Relembrar tradições</a></li>
+                <li><a href="/muralDeHistorias" class="btn btn-menu">Mural de histórias</a></li>
+                <li><a href="/minhasMemorias" class="btn btn-menu">Minhas memórias</a></li>
+                <li><a href="/autoconhecimento" class="btn btn-menu">Autoconhecimento</a></li>
+                <li><a href="/saudeMental" class="btn btn-menu">Saúde mental e Longevidade</a></li>
+                <li><a href="/jogosCognitivos" class="btn btn-menu">Jogos cognitivos</a></li>
                 <li><a href="" class="btn btn-menu">Conheça o projeto</a></li>
             </ul>
         </nav>
