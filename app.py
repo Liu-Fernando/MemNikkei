@@ -85,6 +85,10 @@ def comida_Anko():
 def tradicoesECelebracoes():
         return render_template("RelembrarTradicoes/TradicoesECelebracoes/tradicoesECelebracoes.html")
 
+@app.route("/relembrarTradicoes/tradicoesECelebracoes/bonOdori")
+def tradicao_bonOdori():
+        return render_template("RelembrarTradicoes/TradicoesECelebracoes/tradicoesECelebracoesTemplateUniversal.html", pagina = "bonOdori")
+
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
 def muralDeHistorias():
