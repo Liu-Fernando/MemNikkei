@@ -1,7 +1,65 @@
-from flask import Flask, render_template
+import os
+from dotenv import load_dotenv
+from supabase import create_client, Client
+from functools import wraps
+from flask import Flask, render_template, request, redirect, url_for, session
 
+load_dotenv(override=True)
 
 app = Flask(__name__)
+app.secret_key = os.getenv("SECRET_KEY")
+
+supabase: Client = create_client(
+    os.getenv("SUPABASE_URL"),
+    os.getenv("SUPABASE_KEY")
+)
+
+def login_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if "user_id" not in session:
+            return redirect(url_for("login"))
+        return f(*args, **kwargs)
+    return decorated
+
+##################################  AUTENTICAÇÃO  ##############################
+
+@app.route("/registro", methods=["GET", "POST"])
+def registro():
+    if request.method == "POST":
+        email = request.form["email"]
+        email_confirmar = request.form["email_confirmar"]
+        senha = request.form["senha"]
+        if email != email_confirmar:
+            return render_template("registro.html", erro="Os emails não coincidem.")
+        try:
+            supabase.auth.sign_up({"email": email, "password": senha})
+            return redirect(url_for("login"))
+        except Exception as e:
+            return render_template("registro.html", erro="Erro ao cadastrar. Tente novamente.")
+    return render_template("registro.html")
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        email = request.form["email"]
+        senha = request.form["senha"]
+        try:
+            res = supabase.auth.sign_in_with_password({"email": email, "password": senha})
+            session["user_id"] = res.user.id
+            session["user_email"] = res.user.email
+            return redirect(url_for("home"))
+        except Exception:
+            return render_template("login.html", erro="Email ou senha incorretos.")
+    return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    supabase.auth.sign_out()
+    session.clear()
+    return redirect(url_for("home"))
+
+################################################################################
 
 @app.route("/")
 def home():

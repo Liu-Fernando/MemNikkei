@@ -103,23 +103,22 @@ headerTemplate.innerHTML = `
 
     .nav-menu{
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: #ff8c88;
+    z-index: 999;
 
     justify-content: flex-start;
     align-items: center;
     flex-direction:column;
-    padding-top: 65px;
+    padding-top: 80px;
     padding-bottom: 80px;
     box-sizing: border-box;
 
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    max-height: 85vh;
     }
 
     .nav-menu.active{
@@ -168,8 +167,11 @@ class Header extends HTMLElement{
         const closeBtun = shadowRoot.querySelector('.close-menu-button')
 
         btun.addEventListener('click', ()=> {
+            const headerHeight = shadowRoot.querySelector('header').offsetHeight;
+            navMenu.style.top = headerHeight + 'px';
+            navMenu.style.height = `calc(100vh - ${headerHeight}px)`;
             navMenu.classList.toggle('active');
-            document.body.style.overflow = 'hidden'
+            document.body.style.overflow = 'hidden';
         });
 
         closeBtun.addEventListener('click', ()=> {

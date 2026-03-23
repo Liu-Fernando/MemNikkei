@@ -303,10 +303,14 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="text"] {
-  width: 85vw; 
-  height: 8vw; 
-  padding: 2vw; 
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  margin: 0 auto;
+  width: 85vw;
+  height: 8vw;
+  padding: 2vw;
   font-size: 7vw;
   border-color: black;
   font-family: Inter;
@@ -540,6 +544,49 @@ ul{
     display: flex;
 }
 
+
+/** AUTENTICAÇÃO (login e registro) **/
+
+.auth-titulo {
+    font-weight: bold;
+}
+
+.auth-label {
+    font-size: 6vw;
+    margin-bottom: 1vw;
+    margin-top: 6vw;
+    text-align: center;
+}
+
+.auth-label:first-of-type {
+    margin-top: 0;
+}
+
+.auth-submit-container {
+    text-align: center;
+}
+
+.auth-link-container {
+    font-size: 6vw;
+    text-align: center;
+}
+
+.auth-link-container a {
+    color: #1e497c;
+    font-weight: bold;
+}
+
+.auth-erro {
+    color: red;
+    font-size: 6vw;
+    text-align: center;
+}
+
+.auth-sucesso {
+    color: green;
+    font-size: 6vw;
+    text-align: center;
+}
 
 /** RELEMBRAR TRADIÇÕES **/
 
