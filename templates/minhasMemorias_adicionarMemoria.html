@@ -2,86 +2,62 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "../static/style.css">
-    <script src="../static/components/header.js" type = "text/javascript" ></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/components/header.js" type="text/javascript"></script>
+
     <title>Adicionar Memoria</title>
 
 </head>
 
-    <header-component></header-component>
-    {% include 'botao_voltar.html' %}
-    <section class = "conteudo" > 
-    <h2 id = "titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir uma fotos de cada vez. </h2>
+<header-component></header-component>
+{% include 'botao_voltar.html' %}
+<section class="conteudo">
+    <h2 id="titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir uma fotos de cada vez. </h2>
 
     <form>
 
         <div class="BotaoAzulClaro" id="uploadArquivos"> Selecionar arquivo
-            <input
-            type="file"
-            id="selecionarArquivos"
-            name="selecionarArquivos"
-            >
+            <input type="file" id="selecionarArquivos" name="selecionarArquivos">
         </div>
 
-        <div class = "textBox"> 
+        <div class="textBox">
 
             <label for="tituloMemoria">Título da memória: </label>
-            <input 
-                type="text" 
-                id="tituloMemoria" 
-                name="tituloMemoria"
-                minlength="5"
-                maxlength="100"
-                size="10"
-                placeholder="Digite o título da memória"
-            ><br><br>
+            <input type="text" id="tituloMemoria" name="tituloMemoria" minlength="5" maxlength="100" size="10"
+                placeholder="Digite o título da memória"><br><br>
 
             <label for="dataMemoria">Data da memória: </label>
-            <input
-                type="date" 
-                id="dataMemoria" 
-                name="dataMemoria"
-                placeholder="dd/mm/aaaa"
-                required
-            ><br><br>
+            <input type="date" id="dataMemoria" name="dataMemoria" placeholder="dd/mm/aaaa" required><br><br>
 
             <script>
-            document.getElementById('dataMemoria').max = new Date().toISOString().split('T')[0];
+                document.getElementById('dataMemoria').max = new Date().toISOString().split('T')[0];
             </script>
 
             <label for="localMemoria">Local da memória: </label>
-            <input
-                type="text" 
-                id="localMemoria" 
-                name="localMemoria"
-                minlength="5"
-                maxlength="30"
-                size="10"
-                placeholder="Digite o local da memória"
-            ><br><br>
+            <input type="text" id="localMemoria" name="localMemoria" minlength="5" maxlength="30" size="10"
+                placeholder="Digite o local da memória"><br><br>
 
             <label for="descricao"> Descrição da memória: </label>
-            <textarea
-                id="descricao" 
-                name="descricao"
-                minlength="5"
-                maxlength="400"
-                placeholder="Descreva esta memória"
-            ></textarea><br><br>
+            <textarea id="descricao" name="descricao" minlength="5" maxlength="400"
+                placeholder="Descreva esta memória"></textarea><br><br>
 
-            <input type="submit" value="Enviar">
+            <input id="enviarMemoria" type="submit" value="Enviar">
 
         </div>
 
     </form>
 
     <!-- Temos que ver como vamos lidar com o recebimento dos nomes dos arquivos -->
-    </section>
+</section>
 
 
 <body>
-
+    <table id="listaDeMemorias">
+        Lista de Memorias
+    </table>
 </body>
+<script src="../static/adicionarMemoria.js"></script>

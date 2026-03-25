@@ -153,32 +153,32 @@ headerTemplate.innerHTML = `
 `;
 
 
-class Header extends HTMLElement{
-    constructor(){
+class Header extends HTMLElement {
+    constructor() {
         super();
     }
 
 
-    connectedCallback(){
-        const shadowRoot = this.attachShadow({mode:'closed'});
+    connectedCallback() {
+        const shadowRoot = this.attachShadow({ mode: 'closed' });
 
         shadowRoot.appendChild(headerTemplate.content);
         const btun = shadowRoot.querySelector('.menu-button')
         const navMenu = shadowRoot.querySelector('.nav-menu')
         const closeBtun = shadowRoot.querySelector('.close-menu-button')
 
-        btun.addEventListener('click', ()=> {
+        btun.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             document.body.style.overflow = 'hidden'
         });
 
-        closeBtun.addEventListener('click', ()=> {
+        closeBtun.addEventListener('click', () => {
             navMenu.classList.remove('active');
             document.body.style.overflow = ''
-        }); 
+        });
 
-        
+
     }
 }
 
-customElements.define('header-component',Header)
+customElements.define('header-component', Header)

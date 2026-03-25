@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saúde Mental</title>
     <link rel="stylesheet" href="../static/style.css">
-    <script src="../static/components/header.js" type = "text/javascript" ></script>
+    <script src="../static/components/header.js" type="text/javascript"></script>
 </head>
+
 <body>
     <header-component></header-component>
     {% include 'botao_voltar.html' %}
-    <section> 
+    <section>
 
         <h1>Saúde Mental e Longevidade</h1>
         <p> Escolha um dos temas abaixo para encontrar vídeos e informações educativas </p>
 
-        <a href = "{{ url_for('saudeMental_Solidao') }}" class = "btn" > Solidão</a>  <br>
-        <a href = "{{ url_for('saudeMental_HabitosSaudaveis') }}" class = "btn" > Hábitos Saudáveis</a>  <br>
-        <a href = "{{ url_for('saudeMental_DoencaDeAlzheimer') }}" class = "btn" > Doença de Alzheimer</a>  <br>
-        <a href = "{{ url_for('saudeMental_SaudeCerebral') }}" class = "btn" > Saúde Cerebral </a>  <br>
-        <a href = "{{ url_for('saudeMental_Autoconhecimento') }}" class = "btn" > Autoconhecimento </a>  <br>
+        <a href="{{ url_for('saudeMental_Solidao') }}" class="btn"> Solidão</a> <br>
+        <a href="{{ url_for('saudeMental_HabitosSaudaveis') }}" class="btn"> Hábitos Saudáveis</a> <br>
+        <a href="{{ url_for('saudeMental_DoencaDeAlzheimer') }}" class="btn"> Doença de Alzheimer</a> <br>
+        <a href="{{ url_for('saudeMental_SaudeCerebral') }}" class="btn"> Saúde Cerebral </a> <br>
+        <a href="{{ url_for('saudeMental_Autoconhecimento') }}" class="btn"> Autoconhecimento </a> <br>
 
     </section>
 
-        
+
 </body>
+
 </html>

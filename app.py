@@ -1,7 +1,35 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request, jsonify
+import os
+from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 app = Flask(__name__)
+
+#########################################SUPABASE####################################
+supabase: Client = create_client(
+    os.environ.get("SUPABASE_URL"),
+    os.environ.get("SUPABASE_PUBLISHABLE_KEY")
+)
+#Listar todas memórias
+@app.route("/minhasMemorias/adicionarMemoria/listaDeMemorias", methods=["GET"])
+def get_todos():
+    rows = supabase.table("memorias").select("*").order("id").execute()
+    return jsonify(rows.data if hasattr(rows, "data") else rows)
+#Adiciona memoria
+@app.route("/minhasMemorias/adicionarMemoria/listaDeMemorias", methods =["POST"])
+def add_memoria():
+        data=request.json
+        memoria=data.get("titulo")
+        
+        if not memoria:
+                return jsonify({"error":"Title required"}),400
+        
+        res = supabase.table("memorias").insert(memoria).execute()
+        return jsonify(res.data if hasattr(res,"data") else res),201
+
 
 @app.route("/")
 def home():

@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "../static/style.css">
-    <script src="../static/components/header.js" type = "text/javascript" ></script>
- 
-    
-    <title>Página Inicial</title> 
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/components/header.js" type="text/javascript"></script>
+
+
+    <title>Página Inicial</title>
 </head>
+
 <body>
     <header-component></header-component>
     {% include 'botao_voltar.html' %}
 
 
-    <section class="conteudo"> 
+    <section class="conteudo">
 
         <!--<div class="paiDaImagem">
             <p class="textoPaginaInicial">Olá! <br> 
@@ -24,9 +26,9 @@
             <div class="imagemArvoreComGalho"> </div>
         </div> !-->
 
-        <p class="textoPaginaInicial">Olá! <br> 
-                Bem-vindo(a) ao seu 
-                espaço de memórias e autoconhecimento! 
+        <p class="textoPaginaInicial">Olá! <br>
+            Bem-vindo(a) ao seu
+            espaço de memórias e autoconhecimento!
         </p>
 
         <p class="textoPaginaInicial" style="font-weight: bold;">Por onde vamos começar?</p>
@@ -34,37 +36,42 @@
         <a href="{{ url_for('relembrarTradicoes') }}" class="btn"> Relembrar tradições</a> <br>
         <a href="{{ url_for('muralDeHistorias') }}" class="btn"> Mural de histórias</a> <br>
         <a href="{{ url_for('minhasMemorias') }}" class="btn"> Minhas memórias</a> <br>
-        <a href="{{ url_for('autoconhecimento') }}" class="btn"> Autoconhecimento</a>  <br>
+        <a href="{{ url_for('autoconhecimento') }}" class="btn"> Autoconhecimento</a> <br>
         <a href="{{ url_for('saudeMental') }}" class="btn"> Saúde mental e Longevidade</a> <br>
         <a href="{{ url_for('jogosCognitivos') }}" class="btn"> Jogos cognitivos</a> <br>
 
         <section>
             <div class="Img_Texto">
                 <img src="../static/imagemFundoGalho.png" alt="decoracaoLua" class="decoracaoLua" style="width: 150px;">
-                <a href="SobreNos" style="font-size: 200%; text-align: center;"> <strong>Conheça mais sobre o projeto Memórias Nikkei</strong></a>
+                <a href="SobreNos" style="font-size: 200%; text-align: center;"> <strong>Conheça mais sobre o projeto
+                        Memórias Nikkei</strong></a>
             </div>
             <div style="display: flex; justify-content: center;">
-                <img src="../static/MemLogo.png" style="width: 80%;" alt="GrandeLogo" >
+                <img src="../static/MemLogo.png" style="width: 80%;" alt="GrandeLogo">
             </div>
         </section>
 
 
-    <footer class="rodapeIni"> 
-        <p> Desenvolvido por bacharelandos de Gerontologia e Sistemas de Informação da Universidade de São Paulo. <br> Memórias Nikkei. 2025.<br>Todos os direitos reservados.<p>
+        <footer class="rodapeIni">
+            <p> Desenvolvido por bacharelandos de Gerontologia e Sistemas de Informação da Universidade de São Paulo.
+                <br> Memórias Nikkei. 2025.<br>Todos os direitos reservados.
+            <p>
 
-        <div class="icone_social">
-            <a href="https://www.instagram.com/memorias.nikkei?igsh=MWdsdjJzMTlzMnMwdg==" target="_blank" class="link_social">
-                <img src="../static/instagram.png" alt="instagram" class="icone">
-            </a>
+            <div class="icone_social">
+                <a href="https://www.instagram.com/memorias.nikkei?igsh=MWdsdjJzMTlzMnMwdg==" target="_blank"
+                    class="link_social">
+                    <img src="../static/instagram.png" alt="instagram" class="icone">
+                </a>
 
-            <a href="??" class="link_social">
-                <img src="../static/EmailLogo.png" alt="email" class="icone">
-            </a>
-        </div>
+                <a href="??" class="link_social">
+                    <img src="../static/EmailLogo.png" alt="email" class="icone">
+                </a>
+            </div>
 
-    </footer>
+        </footer>
 
     </section>
 
 </body>
+
 </html>
