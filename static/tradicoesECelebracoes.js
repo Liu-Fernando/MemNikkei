@@ -4,7 +4,7 @@ const paginaTradicoesECelebracoes = {
             {
                 nome: "Bon Odori — Dança e Memória dos Ancestrais",
                 foto1: "/static/makizushi.jpg",
-                descricaoImagem1: "imagem ",
+                descricaoImagem1: "imagem legal aqui",
                 texto1: "O Bon Odori é um festival tradicional japonês realizado no verão, entre julho e agosto, como parte das celebrações do Obon, período dedicado à homenagem aos ancestrais. Segundo a tradição, é um momento em que os espíritos dos antepassados retornam simbolicamente para visitar suas famílias. \n A principal característica do festival é a dança circular chamada odori, cujos movimentos são simples, repetitivos e fáceis de aprender. Muitos passos representam atividades do cotidiano antigo, como pesca, plantio e colheita, conectando a dança às raízes rurais da cultura japonesa.",
                 foto2: "/static/makizushi.jpg",
                 descricaoImagem2: "imagem ",
@@ -26,21 +26,22 @@ const paginaTradicoesECelebracoes = {
     tanabataMatsuri: {
         tradicao: [
             {
-                nome: "Receita básica - Sushi (Makizushi simples)",
+                nome: "Tanabata Matsuri - Festival das Estrelas",
                 foto1: "/static/makizushi.jpg",
-                descricaoImagem1: "imagem ",
-                texto1: "Ingredientes",
-                foto2: "Modo",
+                descricaoImagem1: "imagem legal aqui",
+                texto1: "O Tanabata Matsuri, conhecido como Festival das Estrelas, é uma celebração tradicional japonesa realizada no sétimo dia do sétimo mês. A data é inspirada em uma antiga lenda que conta a história de dois amantes representados pelas estrelas Orihime e Hikoboshi, que vivem separados pela Via Láctea e só podem se encontrar uma vez por ano. \n Durante o festival, as pessoas escrevem seus desejos em tiras coloridas de papel chamadas tanzaku e as penduram em ramos de bambu. As ruas e associações culturais são decoradas com enfeites vibrantes, criando um ambiente alegre e cheio de esperança.",
+                foto2: "/static/makizushi.jpg",
                 descricaoImagem2: "imagem ",
-                texto2: "",
-                foto3: "",
+                texto2: "O Tanabata simboliza sonhos, perseverança e a importância de manter viva a esperança ao longo da vida. \n No Brasil, especialmente em comunidades nipo-brasileiras, o festival tornou-se também um momento de encontro cultural, com apresentações, comidas típicas e celebração das tradições japonesas.",
+                foto3: "/static/makizushi.jpg",
                 descricaoImagem3: "imagem ",
-                texto3: "",
+                texto3: "Mais do que uma festa, o Tanabata é um convite para lembrar dos sonhos que tivemos, dos caminhos que percorremos e dos desejos que ainda guardamos no coração.",
                 textoRecordarMemorias: "Para recordar memórias",
                 perguntas: [
-                    "Quem fazia sushi na sua família?",
-                    "Era preparado em datas especiais?",
-                    "Você ajudava a enrolar?"
+                    "Você se lembra de algum desejo especial que já escreveu?",
+                    "Havia algum sonho que você tinha quando era jovem?",
+                    "Quem costumava estar ao seu lado nessas celebrações?",
+                    "Se pudesse fazer um desejo hoje, qual seria?"
                 ]
             }
         ]
@@ -59,7 +60,7 @@ if (configuracao && configuracao.tradicao) {
 
         const img1 = document.createElement('img');
         img1.className = 'imagemTradicao'
-        img1.src = tradicao.foto;
+        img1.src = tradicao.foto1;
         img1.alt = tradicao.descricaoImagem1;
 
         const texto1 = document.createElement('p');
@@ -68,7 +69,7 @@ if (configuracao && configuracao.tradicao) {
 
         const img2 = document.createElement('img');
         img2.className = 'imagemTradicao'
-        img2.src = tradicao.foto;
+        img2.src = tradicao.foto2;
         img2.alt = tradicao.descricaoImagem2;
 
         const texto2 = document.createElement('p');
@@ -77,7 +78,7 @@ if (configuracao && configuracao.tradicao) {
 
         const img3 = document.createElement('img');
         img3.className = 'imagemTradicao'
-        img3.src = tradicao.foto;
+        img3.src = tradicao.foto3;
         img3.alt = tradicao.descricaoImagem3;
 
         const texto3 = document.createElement('p');
