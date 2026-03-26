@@ -89,6 +89,23 @@ def tradicoesECelebracoes():
 def tradicao_bonOdori():
         return render_template("RelembrarTradicoes/TradicoesECelebracoes/tradicoesECelebracoesTemplateUniversal.html", pagina = "bonOdori")
 
+@app.route("/relembrarTradicoes/tradicoesECelebracoes/tanabataMatsuri")
+def tradicao_tanabataMatsuri():
+        return render_template("RelembrarTradicoes/TradicoesECelebracoes/tradicoesECelebracoesTemplateUniversal.html", pagina = "tanabataMatsuri")
+
+################ ESPAÇOS E ARQUITETURA ######################
+
+@app.route("/relembrarTradicoes/espacosEArquitetura")
+def espacosEArquitetura():
+        return render_template("RelembrarTradicoes/EspacosEArquitetura/espacosEArquitetura.html")
+
+
+################ MÚSICAS SONS E DANÇAS ######################
+
+@app.route("/relembrarTradicoes/musicasSonsEDancas")
+def musicasSonsEDancas():
+        return render_template("RelembrarTradicoes/MusicasSonsEDancas/musicasSonsEDancas.html")
+
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
 def muralDeHistorias():
