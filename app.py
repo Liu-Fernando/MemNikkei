@@ -107,11 +107,31 @@ def musicasSonsEDancas():
         return render_template("RelembrarTradicoes/MusicasSonsEDancas/musicasSonsEDancas.html")
 
 
-################ MÚSICAS SONS E DANÇAS ######################
+################ OBJETOS COTIDIANOS ######################
 
 @app.route("/relembrarTradicoes/objetosCotidianos")
 def objetosCotidianos():
         return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianos.html")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/casaEFamilia")
+def casaEFamilia():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "casaEFamilia")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/espiritualidadeETradicao")
+def espiritualidadeETradicao():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "espiritualidadeETradicao")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/objetosDeTrabalho")
+def objetosDeTrabalho():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "objetosDeTrabalho")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/escolaEEducacao")
+def escolaEEducacao():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "escolaEEducacao")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/vestimentasETecidos")
+def vestimentasETecidos():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "vestimentasETecidos")
 
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
