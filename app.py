@@ -106,6 +106,13 @@ def espacosEArquitetura():
 def musicasSonsEDancas():
         return render_template("RelembrarTradicoes/MusicasSonsEDancas/musicasSonsEDancas.html")
 
+
+################ MÚSICAS SONS E DANÇAS ######################
+
+@app.route("/relembrarTradicoes/objetosCotidianos")
+def objetosCotidianos():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianos.html")
+
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
 def muralDeHistorias():
