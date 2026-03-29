@@ -1,15 +1,17 @@
-.nomeComida, .nomeTradicao, .nometipoObjeto{
+.nomeComida, .nomeTradicao, .nometipoObjeto, .nomeEsporte{
     font-size: 7vw; 
     font-weight: bold;
+    padding-bottom: 0;
 }
 
-.imagemComida, .imagemTradicao, .imagemtipoObjeto{
+.imagemComida, .imagemTradicao, .imagemtipoObjeto, .imagem{
     padding-top: 5vw;
     height: 100%;
     width: 100%;
+    padding-bottom: 5vw;
 }
 
-.textoIngredientes, .textoModoDePreparo, .textoRecordarMemorias, .textoVersaoAlternativa{
+.textoIngredientes, .textoModoDePreparo, .textoRecordarMemorias, .textoVersaoAlternativa, .textoNegrito{
     font-size: 6vw;
     font-weight: bold;
     padding-bottom: 0;
@@ -20,14 +22,16 @@
     font-size: 6vw;
     text-align: center;
     font-weight: bold;
-    padding-top: 0vw;
-    margin-top: 0vw;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .texto{
     font-size: 5.5vw;
     padding-bottom: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    margin-top: 1vw;
 }
 
 ul li{
@@ -54,4 +58,21 @@ ol li{
     text-align: center;
     margin: 0 auto 0 auto;
     padding: 0 auto 0 auto;
+}
+
+.ano{
+    font-size: 7vw;
+    color: #1e497c;
+    font-weight: bold;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-top: 1vw;
+}
+
+.textoLinhaDoTempo{
+    font-size: 5vw;
+    text-align: left;
+    padding-top: 0;
+    margin-top: 0;
 }

@@ -133,6 +133,34 @@ def escolaEEducacao():
 def vestimentasETecidos():
         return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "vestimentasETecidos")
 
+################ ESPORTES E CONQUISTAS ######################
+
+@app.route("/relembrarTradicoes/esportesEConquistas")
+def esportesEConquistas():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportesEConquistas.html")
+
+#### ESPORTES ####
+@app.route("/relembrarTradicoes/esportesEConquistas/esportes")
+def esportes():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportes.html")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/esportes/beisebol")
+def beisebol():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportesTemplateUniversal.html", pagina = "beisebol")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/esportes/judo")
+def judo():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportesTemplateUniversal.html", pagina = "judo")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/esportes/gateball")
+def gateball():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportesTemplateUniversal.html", pagina = "gateball")
+
+### REFERÊNCIAS OLÍMPICAS ###
+@app.route("/relembrarTradicoes/esportesEConquistas/referenciasOlimpicas")
+def referenciasOlimpicas():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/referenciasOlimpicas.html")
+
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
 def muralDeHistorias():
