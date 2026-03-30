@@ -7,25 +7,25 @@ const paginaExplorarObjetos = {
                 texto: "Na casa nikkei, cada objeto tinha função e significado. \n O futon era guardado todas as manhãs. \n O chá era servido com cuidado. \n Os hashis ensinavam disciplina desde cedo.",
 
                 arrayDeFotos: [
-                    {tipo: "foto", src: "/static/chochin.jpg", alt: "era pra ser um chochin"},
+                    {tipo: "foto", src: "/static/chochin.jpg", alt: "Uma lanterna de papel japonesa branca (chochin) de formato cilíndrico pendurada em frente a uma folhagem densa e verde. A lanterna possui caracteres japoneses pretos pintados em sua superfície."},
                     {tipo: "nomeObjeto", conteudo: "Chochin (lanterna japonesa)"},
 
-                    {tipo: "foto", src: "/static/futon.webp", alt: "era pra ser um futon"},
+                    {tipo: "foto", src: "/static/futon.webp", alt: "Interior de um quarto tradicional japonês com dois futons brancos estendidos sobre o chão de tatame. O ambiente possui paredes brancas, detalhes em madeira clara, uma janela shoji de papel translúcido e um pergaminho azul pendurado na parede."},
                     {tipo: "nomeObjeto", conteudo: "Futon"},
 
-                    {tipo: "foto", src: "/static/tatame.jpeg", alt: "era pra ser um tatame"},
+                    {tipo: "foto", src: "/static/tatame.jpeg", alt: "Ampla visão de um cômodo tradicional japonês (washitsu) com o chão totalmente coberto por placas de tatame. A estrutura da casa é de madeira escura com divisórias de papel shoji. Pequenas placas de madeira com inscrições estão posicionadas sobre o tatame."},
                     {tipo: "nomeObjeto", conteudo: "Tatame"},
 
-                    {tipo: "foto", src: "/static/hashi.jpg", alt: "era pra ser um hashi"},
+                    {tipo: "foto", src: "/static/hashi.jpg", alt: "Oito pares de hashi (pauzinhos) de diferentes materiais e designs alinhados diagonalmente sobre um fundo branco. Os estilos variam entre madeira natural, bambu, metal e cerâmica decorada com padrões florais e caracteres japoneses."},
                     {tipo: "nomeObjeto", conteudo: "Hashi"},
 
-                    {tipo: "foto", src: "/static/chawan.jpeg", alt: "era pra ser um chawan"},
+                    {tipo: "foto", src: "/static/chawan.jpeg", alt: "Uma tigela de chá de cerâmica branca decorada com desenhos de leques japoneses coloridos. Ao lado, um batedor de bambu (chasen) para o preparo de matcha. O cenário é composto por panos de mesa em tons de rosa e roxo com um bule ao fundo."},
                     {tipo: "nomeObjeto", conteudo: "Chawan"},
 
-                    {tipo: "foto", src: "/static/buleDeCha.jpeg", alt: "era pra ser um bule de chá"},
+                    {tipo: "foto", src: "/static/buleDeCha.jpeg", alt: "Close-up de um bule de ferro fundido preto (tetsubin) e uma xícara de cerâmica soltando vapor. À frente, uma pequena tigela de metal contém ervas secas e frutas para infusão. O fundo apresenta luzes douradas circulares desfocadas (bokeh), criando um clima aconchegante."},
                     {tipo: "nomeObjeto", conteudo: "Bule de chá"},
 
-                    {tipo: "foto", src: "/static/caixaDeBento.jpeg", alt: "era pra ser uma caixa de bentô"},
+                    {tipo: "foto", src: "/static/caixaDeBento.jpeg", alt: "Vista superior de uma caixa de bento de madeira clara sobre uma mesa. Contém uma porção de arroz branco com uma ameixa em conserva (ume boshi), camarões empanados (tempura), tonkatsu, salada de repolho e conserva de nabo. À frente, um par de hashi em um envelope de papel com logomarca japonesa."},
                     {tipo: "nomeObjeto", conteudo: "Caixa de bentô"}
                 ],
 
