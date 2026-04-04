@@ -192,13 +192,17 @@ def autoconhecimento():
 def arvore_Da_Vida():
         return render_template("arvoreDaVida.html")
 
-@app.route("/autoconhecimento/minhaJornada")
+@app.route("/autoconhecimento/arvoreDaVida/minhaJornada")
 def minha_Jornada():
         return render_template("minhaJornada.html")
 
 @app.route("/autoconhecimento/ikigai")
 def ikigai():
         return render_template("ikigai.html")
+
+@app.route("/autoconhecimento/ikigai/ikigaiPerguntas")
+def minhaJornadaIkigai():
+        return render_template("ikigaiPerguntas.html")
 
 ##################################  JOGOS COGNITIVOS  ##############################
 @app.route("/jogosCognitivos")
