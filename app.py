@@ -2,6 +2,8 @@ from flask import Flask, render_template,request, jsonify
 import os
 from supabase import create_client, Client
 from dotenv import load_dotenv
+from datetime import datetime
+from io import BufferedReader
 
 load_dotenv()
 
@@ -15,21 +17,37 @@ supabase: Client = create_client(
 )
 #Listar todas memórias
 @app.route("/minhasMemorias/adicionarMemoria/listaDeMemorias", methods=["GET"])
-def get_todos():
+def get_memorias():
     rows = supabase.table("memorias").select("*").order("id").execute()
+
     return jsonify(rows.data if hasattr(rows, "data") else rows)
 #Adiciona memoria
-@app.route("/minhasMemorias/adicionarMemoria/listaDeMemorias", methods =["POST"])
+@app.route("/minhasMemorias/adicionarMemoria", methods =["POST"])
 def add_memoria():
-        data=request.json
-        memoria=data.get("titulo")
+        #adicionar checagens para erros, colocar requisição do JS para fazer essa checagem
+        #Recebe dados de input diretamente de adcionarMemorias.html
+        titulo= request.form['tituloMemoria']
+        data = request.form['dataMemoria']
+        local= request.form['localMemoria']
+        descricao= request.form['descricao']
+        arquivo=request.files['selecionarArquivos']
+        #Cria um nome único para ser armazenado no bucket
+        filePath= arquivo.filename + str(datetime.now())
+        #Transforma em Buffered para solucionar problema com FileStorage object que não é aceito pelo upload do supabase
+        file_arquivo = BufferedReader(arquivo)
+        #Havia tido um erro que não consegui replicar com filePath
+        supabase.storage.from_("arquivo_memorias").upload(path=filePath,file= file_arquivo)
+        arquivo_url= supabase.storage.from_("arquivo_memorias").get_public_url(filePath)
+        new_row = {
+                "titulo": titulo,
+                "data": data,
+                "local": local,
+                "descricao":descricao,
+                "arquivo": arquivo_url
+        }
+        supabase.table("memorias").insert(new_row).execute()
+        return render_template("minhasMemorias_adicionarMemoria.html")
         
-        if not memoria:
-                return jsonify({"error":"Title required"}),400
-        
-        res = supabase.table("memorias").insert(memoria).execute()
-        return jsonify(res.data if hasattr(res,"data") else res),201
-
 
 @app.route("/")
 def home():

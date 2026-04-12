@@ -12,13 +12,13 @@
     <title>Adicionar Memoria</title>
 
 </head>
-
+<!--Esse formulário está sendo processado diretamente no @app.route("/minhasMemorias/adicionarMemoria", methods =["POST"])-->
 <header-component></header-component>
 {% include 'botao_voltar.html' %}
 <section class="conteudo">
     <h2 id="titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir uma fotos de cada vez. </h2>
 
-    <form>
+    <form action="/minhasMemorias/adicionarMemoria" method="POST" enctype="multipart/form-data">
 
         <div class="BotaoAzulClaro" id="uploadArquivos"> Selecionar arquivo
             <input type="file" id="selecionarArquivos" name="selecionarArquivos">
@@ -27,7 +27,7 @@
         <div class="textBox">
 
             <label for="tituloMemoria">Título da memória: </label>
-            <input type="text" id="tituloMemoria" name="tituloMemoria" minlength="5" maxlength="100" size="10"
+            <input type="text" id="tituloMemoria" name="tituloMemoria"  maxlength="100" size="10"
                 placeholder="Digite o título da memória"><br><br>
 
             <label for="dataMemoria">Data da memória: </label>
@@ -38,11 +38,11 @@
             </script>
 
             <label for="localMemoria">Local da memória: </label>
-            <input type="text" id="localMemoria" name="localMemoria" minlength="5" maxlength="30" size="10"
+            <input type="text" id="localMemoria" name="localMemoria"  maxlength="30" size="10"
                 placeholder="Digite o local da memória"><br><br>
 
             <label for="descricao"> Descrição da memória: </label>
-            <textarea id="descricao" name="descricao" minlength="5" maxlength="400"
+            <textarea id="descricao" name="descricao"  maxlength="400"
                 placeholder="Descreva esta memória"></textarea><br><br>
 
             <input id="enviarMemoria" type="submit" value="Enviar">

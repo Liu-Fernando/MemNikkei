@@ -4,7 +4,8 @@ const lista = document.getElementById('listaDeMemorias');
 //Garante que a página carregou antes de tentar rodar script
 window.addEventListener("DOMContentLoaded", (event) => {
   //Mantem JS separado do HTML
-  enviar.addEventListener("click", fetchMemorias);
+  //enviar.addEventListener("click", addMemoria);
+
 });
 
 async function fetchMemorias() {
@@ -36,15 +37,24 @@ async function fetchMemorias() {
     
   }
   )
-  const form =''
-  await fetch('/minhasMemorias/adicionarMemoria/listaDeMemorias',
-    {method:'POST',
-    headers:{'Content-Type': 'application/json'},
-    body:JSON.stringify(form)
-    
-  });
+  
 }
 
-async function addMemoria() {
-  
+async function addMemoria(event) {
+  event.preventDefault();
+  const titulo= document.getElementById('tituloMemoria').value.trim();
+  const data= document.getElementById('dataMemoria').value;
+  const local= document.getElementById('localMemoria').value.trim();
+  const descricao= document.getElementById('descricao').value.trim();
+  console.log("input",titulo,data,local,descricao)
+    await fetch('/minhasMemorias/adicionarMemoria',{
+    method:'POST',
+    body: JSON.stringify({
+      titulo: titulo,
+      data:data,
+      local:local,
+      descricao: descricao
+    }),
+    headers: {'Content-Type': 'application/json'}
+  });
 }
