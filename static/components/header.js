@@ -161,10 +161,11 @@ class Header extends HTMLElement{
     connectedCallback(){
         const shadowRoot = this.attachShadow({mode:'closed'});
 
-        shadowRoot.appendChild(headerTemplate.content);
+        shadowRoot.appendChild(headerTemplate.content.cloneNode(true));
         const btun = shadowRoot.querySelector('.menu-button')
         const navMenu = shadowRoot.querySelector('.nav-menu')
         const closeBtun = shadowRoot.querySelector('.close-menu-button')
+        const ul = shadowRoot.querySelector('ul')
 
         btun.addEventListener('click', ()=> {
             const headerHeight = shadowRoot.querySelector('header').offsetHeight;
@@ -177,9 +178,21 @@ class Header extends HTMLElement{
         closeBtun.addEventListener('click', ()=> {
             navMenu.classList.remove('active');
             document.body.style.overflow = ''
-        }); 
+        });
 
-        
+        fetch('/auth-status')
+            .then(r => r.json())
+            .then(data => {
+                const li = document.createElement('li');
+                if (data.logado && data.guest) {
+                    li.innerHTML = `<a href="/logout" class="btn btn-menu">Sair (Visitante)</a>`;
+                } else if (data.logado) {
+                    li.innerHTML = `<a href="/logout" class="btn btn-menu">Sair (${data.email})</a>`;
+                } else {
+                    li.innerHTML = `<a href="/login" class="btn btn-menu">Entrar / Cadastrar</a>`;
+                }
+                ul.appendChild(li);
+            });
     }
 }
 

@@ -36,9 +36,26 @@
 
         <br>
         <p class="auth-link-container">
+            <a href="/esqueci-senha">Esqueci minha senha</a>
+        </p>
+
+        <br>
+        <p class="auth-link-container">
             Não tem conta ainda? <br>
             <a href="/registro">Cadastre-se aqui</a>
         </p>
+
+        {% if not is_guest %}
+        <br>
+        <p class="auth-link-container">
+            Ou <a href="/guest">entre como visitante</a>
+        </p>
+        {% else %}
+        <br>
+        <p class="auth-link-container">
+            Para acessar essa página, faça login ou cadastre-se.
+        </p>
+        {% endif %}
 
     </section>
 </body>

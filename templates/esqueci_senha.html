@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/components/header.js" type="text/javascript"></script>
+    <title>Esqueci minha senha — Memórias Nikkei</title>
+</head>
+<body>
+    <header-component></header-component>
+    {% include 'botao_voltar.html' %}
+
+    <section class="conteudo">
+
+        <p class="textoPaginaInicial auth-titulo">Esqueci minha senha</p>
+
+        {% if sucesso %}
+            <p class="auth-link-container">
+                Email enviado! <br>
+                Verifique sua caixa de entrada (e a pasta de spam) e clique no link para redefinir sua senha.
+            </p>
+        {% else %}
+
+            {% if erro %}
+            <p class="auth-erro">{{ erro }}</p>
+            {% endif %}
+
+            <p class="auth-link-container">
+                Digite seu email e enviaremos um link para você criar uma nova senha.
+            </p>
+
+            <form method="POST" action="/esqueci-senha">
+
+                <p class="auth-label">Email</p>
+                <input type="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                <br><br>
+                <div class="auth-submit-container">
+                    <input type="submit" value="Enviar link">
+                </div>
+
+            </form>
+
+        {% endif %}
+
+        <br>
+        <p class="auth-link-container">
+            <a href="/login">Voltar para o login</a>
+        </p>
+
+    </section>
+</body>
+</html>

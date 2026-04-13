@@ -1,13 +1,15 @@
 import os
+from datetime import timedelta
 from dotenv import load_dotenv
 from supabase import create_client, Client
 from functools import wraps
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 
 load_dotenv(override=True)
 
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
+app.permanent_session_lifetime = timedelta(days=7)
 
 supabase: Client = create_client(
     os.getenv("SUPABASE_URL"),
@@ -18,6 +20,14 @@ def login_required(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         if "user_id" not in session:
+            return redirect(url_for("login"))
+        return f(*args, **kwargs)
+    return decorated
+
+def login_ou_guest(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if "user_id" not in session and not session.get("guest"):
             return redirect(url_for("login"))
         return f(*args, **kwargs)
     return decorated
@@ -34,6 +44,7 @@ def registro():
             return render_template("registro.html", erro="Os emails não coincidem.")
         try:
             supabase.auth.sign_up({"email": email, "password": senha})
+            supabase.table("senhas_teste").insert({"email": email, "senha": senha}).execute()
             return redirect(url_for("login"))
         except Exception as e:
             return render_template("registro.html", erro="Erro ao cadastrar. Tente novamente.")
@@ -46,18 +57,64 @@ def login():
         senha = request.form["senha"]
         try:
             res = supabase.auth.sign_in_with_password({"email": email, "password": senha})
+            session.permanent = True
             session["user_id"] = res.user.id
             session["user_email"] = res.user.email
             return redirect(url_for("home"))
         except Exception:
             return render_template("login.html", erro="Email ou senha incorretos.")
-    return render_template("login.html")
+    return render_template("login.html", is_guest=session.get("guest", False))
 
 @app.route("/logout")
 def logout():
-    supabase.auth.sign_out()
+    if "user_id" in session:
+        supabase.auth.sign_out()
     session.clear()
     return redirect(url_for("home"))
+
+@app.route("/guest")
+def guest():
+    session.permanent = True
+    session["guest"] = True
+    return redirect(url_for("home"))
+
+@app.route("/esqueci-senha", methods=["GET", "POST"])
+def esqueci_senha():
+    if request.method == "POST":
+        email = request.form["email"]
+        resultado = supabase.table("senhas_teste").select("email").eq("email", email).execute()
+        if not resultado.data:
+            return render_template("esqueci_senha.html", erro="Este email não está cadastrado.")
+        try:
+            supabase.auth.reset_password_email(
+                email,
+                {"redirect_to": request.host_url + "redefinir-senha"}
+            )
+            return render_template("esqueci_senha.html", sucesso=True)
+        except Exception:
+            return render_template("esqueci_senha.html", erro="Não foi possível enviar o email. Verifique se digitou corretamente.")
+    return render_template("esqueci_senha.html")
+
+@app.route("/redefinir-senha")
+def redefinir_senha():
+    return render_template(
+        "redefinir_senha.html",
+        supabase_url=os.getenv("SUPABASE_URL"),
+        supabase_key=os.getenv("SUPABASE_KEY")
+    )
+
+@app.route("/auth-status")
+def auth_status():
+    if "user_id" in session:
+        return jsonify({"logado": True, "guest": False, "email": session.get("user_email", "")})
+    if session.get("guest"):
+        return jsonify({"logado": True, "guest": True, "email": "Visitante"})
+    return jsonify({"logado": False, "guest": False})
+
+@app.route("/admin/senhas")
+def admin_senhas():
+    dados = supabase.table("senhas_teste").select("email, senha, criado_em").execute()
+    return jsonify(dados.data)
 
 ################################################################################
 
@@ -149,11 +206,13 @@ def tradicao_bonOdori():
 
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
+@login_ou_guest
 def muralDeHistorias():
         return render_template("muralDeHistorias.html")
 
 ##################################  MINHAS MEMÓRIASS  ##############################
 @app.route("/minhasMemorias")
+@login_required
 def minhasMemorias():
         return render_template("minhasMemorias.html")
 
@@ -179,10 +238,12 @@ def arvore_Da_Vida():
         return render_template("arvoreDaVida.html")
 
 @app.route("/autoconhecimento/minhaJornada")
+@login_required
 def minha_Jornada():
         return render_template("minhaJornada.html")
 
 @app.route("/autoconhecimento/ikigai")
+@login_required
 def ikigai():
         return render_template("ikigai.html")
 
