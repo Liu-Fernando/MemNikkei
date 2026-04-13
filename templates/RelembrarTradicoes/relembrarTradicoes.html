@@ -38,24 +38,24 @@
 
         <div class="btnDireitaImgEsquerda">
             <img class="iconeRT" src="../../static/portal.png" alt="ícone de portal japonês">
-            <a class="balaoRTDireita"> Espaços e arquitetura </a>
+            <a href="{{ url_for('espacosEArquitetura') }}" class="balaoRTDireita"> Espaços e arquitetura </a>
         </div>
 
         <div class="btnEsquerdaImgDireita">
-            <a class="balaoRTEsquerdo"> Objetos cotidianos </a>
+            <a class="balaoRTEsquerdo" href="{{ url_for('objetosCotidianos') }}"> Objetos cotidianos </a>
             <img class="iconeRT" src="../../static/gatinho.png" alt="ícone de gato da sorte japonês">
         </div>
 
         <div class="btnDireitaImgEsquerda">
             <img class="iconeRT" src="../../static/notaMusica.png" alt="ícone de nota de música">
-            <a class="balaoRTDireita"> Músicas, sons e danças </a>
+            <a href="{{ url_for('musicasSonsEDancas') }}" class="balaoRTDireita"> Músicas, sons e danças </a>
         </div>
 
         <div class="btnEsquerdaImgDireita">
-            <a class="balaoRTEsquerdo"> Esportes e conquistas </a>
+            <a href="{{ url_for('esportesEConquistas') }}" class="balaoRTEsquerdo"> Esportes e conquistas </a>
             <img class="iconeRT" src="../../static/bandeiraJapao.png" alt="ícone da bandeira do Japão">
         </div>
 
-    </section>
+    </section> 
 
 </body>

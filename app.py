@@ -204,6 +204,78 @@ def tradicoesECelebracoes():
 def tradicao_bonOdori():
         return render_template("RelembrarTradicoes/TradicoesECelebracoes/tradicoesECelebracoesTemplateUniversal.html", pagina = "bonOdori")
 
+@app.route("/relembrarTradicoes/tradicoesECelebracoes/tanabataMatsuri")
+def tradicao_tanabataMatsuri():
+        return render_template("RelembrarTradicoes/TradicoesECelebracoes/tradicoesECelebracoesTemplateUniversal.html", pagina = "tanabataMatsuri")
+
+################ ESPAÇOS E ARQUITETURA ######################
+
+@app.route("/relembrarTradicoes/espacosEArquitetura")
+def espacosEArquitetura():
+        return render_template("RelembrarTradicoes/EspacosEArquitetura/espacosEArquitetura.html")
+
+
+################ MÚSICAS SONS E DANÇAS ######################
+
+@app.route("/relembrarTradicoes/musicasSonsEDancas")
+def musicasSonsEDancas():
+        return render_template("RelembrarTradicoes/MusicasSonsEDancas/musicasSonsEDancas.html")
+
+
+################ OBJETOS COTIDIANOS ######################
+
+@app.route("/relembrarTradicoes/objetosCotidianos")
+def objetosCotidianos():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianos.html")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/casaEFamilia")
+def casaEFamilia():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "casaEFamilia")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/espiritualidadeETradicao")
+def espiritualidadeETradicao():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "espiritualidadeETradicao")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/objetosDeTrabalho")
+def objetosDeTrabalho():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "objetosDeTrabalho")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/escolaEEducacao")
+def escolaEEducacao():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "escolaEEducacao")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/vestimentasETecidos")
+def vestimentasETecidos():
+        return render_template("RelembrarTradicoes/ObjetosCotidianos/objetosCotidianosTemplateUniversal.html", pagina = "vestimentasETecidos")
+
+################ ESPORTES E CONQUISTAS ######################
+
+@app.route("/relembrarTradicoes/esportesEConquistas")
+def esportesEConquistas():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportesEConquistas.html")
+
+#### ESPORTES ####
+@app.route("/relembrarTradicoes/esportesEConquistas/esportes")
+def esportes():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportes.html")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/esportes/beisebol")
+def beisebol():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportesTemplateUniversal.html", pagina = "beisebol")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/esportes/judo")
+def judo():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportesTemplateUniversal.html", pagina = "judo")
+
+@app.route("/relembrarTradicoes/objetosCotidianos/esportes/gateball")
+def gateball():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/esportesTemplateUniversal.html", pagina = "gateball")
+
+### REFERÊNCIAS OLÍMPICAS ###
+@app.route("/relembrarTradicoes/esportesEConquistas/referenciasOlimpicas")
+def referenciasOlimpicas():
+        return render_template("RelembrarTradicoes/EsportesEConquistas/referenciasOlimpicas.html")
+
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
 @login_ou_guest
@@ -237,7 +309,7 @@ def autoconhecimento():
 def arvore_Da_Vida():
         return render_template("arvoreDaVida.html")
 
-@app.route("/autoconhecimento/minhaJornada")
+@app.route("/autoconhecimento/arvoreDaVida/minhaJornada")
 @login_required
 def minha_Jornada():
         return render_template("minhaJornada.html")
@@ -246,6 +318,10 @@ def minha_Jornada():
 @login_required
 def ikigai():
         return render_template("ikigai.html")
+
+@app.route("/autoconhecimento/ikigai/ikigaiPerguntas")
+def minhaJornadaIkigai():
+        return render_template("ikigaiPerguntas.html")
 
 ##################################  JOGOS COGNITIVOS  ##############################
 @app.route("/jogosCognitivos")

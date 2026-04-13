@@ -1,0 +1,65 @@
+.tema{
+    font-size: 7vw; 
+    font-weight: bold;
+    padding-bottom: 0;
+}
+
+.explicacaoTema{
+    font-size: 6vw; 
+    font-weight: bold;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.textoPergunta{
+    font-size: 5.5vw; 
+    font-weight: bold;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+#inputPergunta{
+    width: 100%; 
+    height: 70vw; 
+    padding: 2vw; 
+    font-size: 5.5vw;
+    background-color: #e3d6a6;
+    border-color: #e3d6a6;
+    border-radius: 5vw;
+    font-family: Inter;
+    resize: vertical;
+    box-sizing: border-box;
+    margin-bottom: 5vw;
+}
+
+#inputPergunta::placeholder {
+    color: #858585;
+    font-style: italic;
+    font-size: 5.5vw;
+    padding-top: 5vw;
+    padding-left: 5vw;
+}
+
+.botaoFinalizar, .botaoProximo{
+    all: unset;
+    box-sizing: border-box;
+
+    font-family: Inter;
+    width: 50vw;
+    height: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    background-color: #1e497c;
+    color: white;
+
+    padding: 10px 15px;
+    border-radius: 15vw;
+    font-size: 9vw;
+    font-weight: bold;
+
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -4,7 +4,7 @@ const paginasComidasEReceitas = {
             {
                 nome: "Receita básica - Sushi (Makizushi simples)",
                 foto: "/static/makizushi.jpg",
-                descricaoImagem: "imagem de um prato com algumas peças de sushi ",
+                descricaoImagem: "Foto em close de uma tábua de madeira rústica segurando um prato de ardósia preta decorado com caracteres japoneses brancos e uma variedade de sushi. O prato inclui nigiri de salmão, nigiri de atum, vários maki rolls recheados com salmão e cream cheese e cobertos com cebolinha, maki rolls crocantes de salmão frito, maki rolls de uramaki de atum com sementes de gergelim preto e maki rolls de uramaki de pepino e cream cheese com sementes de gergelim branco. O gengibre em conserva (shoga) e o wasabi estão dispostos na lateral do prato de ardósia. Uma tigela pequena de molho de soja e dois hashis de madeira vermelha estão sobre a tábua de madeira rústica atrás do prato de sushi, ao lado de um candelabro de vidro em forma de lótus",
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "2 xícaras de arroz japonês",
@@ -38,8 +38,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Missoshiru",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/missoshiru.jpg", 
+                descricaoImagem: "Foto superior em primeiro plano de uma tigela de cerâmica preta com uma borda interna vermelha vibrante, cheia de sopa de missô. A sopa tem uma cor marrom alaranjada turva e é polvilhada com cebolinha verde picada e tofu em cubos. O caldo está levemente ondulado na superfície. O fundo é preto escuro e a iluminação é direta, realçando os detalhes da tigela e da sopa.", 
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "1 litro de água",
@@ -69,8 +69,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Karê",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/kare.jpeg",
+                descricaoImagem: "Foto superior em ângulo de um prato raso de cerâmica branca com listras azuis verticais na borda. O prato contém uma generosa porção de arroz branco cozido em um lado, e um guisado de caril japonês marrom escuro no outro, com pedaços visíveis de batata, cenoura e carne bovina. Uma pequena porção de gengibre em conserva vermelho (shoga) está colocada na borda superior, entre o arroz e o caril.", 
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "500g de carne em cubos",
@@ -103,8 +103,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Onigiri",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/onigiri.jpeg", 
+                descricaoImagem: "Foto em close de dois onigiri em um prato de cerâmica branca com bordas rústicas e uma textura sutil. O onigiri em primeiro plano é um triângulo de arroz branco cozido envolto em uma folha de nori com uma generosa cobertura de shirasu (pequenos peixes fritos) dourados e crocantes. O onigiri atrás dele é outro triângulo de arroz branco cozido envolto em uma folha de nori com uma cobertura de katsuobushi (flocos de atum-bonito secos) escorrendo sobre o topo. A iluminação é suave e natural, destacando a textura do arroz, do nori e das coberturas.", 
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "Arroz japonês cozido",
@@ -133,8 +133,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Gohan",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/gohan.jpeg",
+                descricaoImagem: "Foto superior em primeiro plano de uma tigela de cerâmica de estilo japonês, com exterior preto brilhante e interior vermelho vibrante. Ela está cheia até a borda com arroz branco de grão curto, no qual um ovo cru foi misturado, resultando em uma cobertura amarela pálida e cremosa com focos visíveis de clara e gema de ovo. O fundo é branco neutro.",
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "2 xícaras de arroz japonês",
@@ -161,8 +161,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Manju",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/manju.jpg", 
+                descricaoImagem: "Foto de três biscoitos manjus, moldados para se parecerem com folhas de bordo japonesas, dispostos artisticamente em um prato de cerâmica preta com um padrão pontilhado e uma textura irregular. Os biscoitos têm uma cor marrom dourado rica e os detalhes das nervuras da folha são impressos na superfície. O prato de cerâmica preta está centralizado em um fundo branco e a iluminação é suave e difusa.", 
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "2 xícaras de farinha de trigo",
@@ -193,8 +193,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Dorayaki",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/dorayaki.jpeg", 
+                descricaoImagem: "Foto em close de dois dorayakis dourados e redondos, um doce tradicional japonês. Um dorayaki está inteiro, enquanto o outro está cortado ao meio, revelando o recheio de pasta de feijão azuki (anko) escura e doce entre as duas panquecas macias e fofas. O fundo é branco neutro.", 
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "2 ovos",
@@ -228,8 +228,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Yokan simples",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/yokan.jpeg", 
+                descricaoImagem: "Foto superior em primeiro plano de dois blocos retangulares de yokan de cor âmbar escuro e translúcido, dispostos em um pequeno prato de cerâmica branca com bordas onduladas rústicas. O yokan tem uma textura suave e gelificada e uma cor profunda e rica. O fundo é uma mesa de madeira escura com iluminação suave.", 
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "2 xícaras de anko",
@@ -261,8 +261,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Mochi simples",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/mochi.jpeg",
+                descricaoImagem: "Foto de uma variedade de bolinhos de mochi redondos e coloridos dispostos em um prato de cerâmica branca rústica. Há mochis brancos, verdes claros e rosa pálido. Alguns mochis brancos e verdes claros foram cortados ao meio, revelando o recheio de sorvete de matcha verde vibrante por dentro. A textura macia e elástica do mochi e o recheio cremoso são visíveis. O fundo é uma superfície de madeira quente.", 
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "2 xícaras de arroz glutinoso",
@@ -296,8 +296,8 @@ const paginasComidasEReceitas = {
         comida: [
             {
                 nome: "Receita básica - Anko",
-                foto: "/static/makizushi.jpg", //MUDAR ISSO AQUI
-                descricaoImagem: "", //MUDAR ISSO AQUI
+                foto: "/static/anko.jpg", 
+                descricaoImagem: "Foto superior em primeiro plano de uma pequena tigela de cerâmica preta rústica cheia de anko, uma pasta de feijão azuki vermelha escura e doce. A pasta tem uma textura grossa e ped",
                 textoIngredientes: "Ingredientes",
                 ingredientes: [
                     "1 xícara de feijão azuki",
