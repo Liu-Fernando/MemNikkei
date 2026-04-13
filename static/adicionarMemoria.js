@@ -4,7 +4,7 @@ const lista = document.getElementById('listaDeMemorias');
 //Garante que a página carregou antes de tentar rodar script
 window.addEventListener("DOMContentLoaded", (event) => {
   //Mantem JS separado do HTML
-  //enviar.addEventListener("click", addMemoria);
+  enviar.addEventListener("click", fetchMemorias);
 
 });
 
@@ -29,7 +29,7 @@ async function fetchMemorias() {
             <td>${memoria.data} </td>
             <td>${memoria.local} </td>
             <td>${memoria.descricao} </td>
-            <td>${memoria.arquivo} </td>
+            <img src= ${memoria.arquivo} style=height:100px>
         </tr>
     
     `;

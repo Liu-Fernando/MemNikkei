@@ -129,3 +129,10 @@ Conformidades ABNT
     5.15 Animação
     5.16 Tempo
         -5.16.1 Limite de tempo – Recomendação
+
+Erro de FileStorage:
+https://stackoverflow.com/questions/39437909/flask-filestorage-object-to-file-object?rq=1
+
+Flask form: 
+https://stackoverflow.com/questions/53472917/accessing-html-form-data-inside-python-flask
+https://flask.palletsprojects.com/en/stable/api/#flask.Request.files
