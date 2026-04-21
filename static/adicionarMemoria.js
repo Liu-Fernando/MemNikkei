@@ -9,11 +9,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 async function fetchMemorias() {
-  const data = await fetch('/minhasMemorias/adicionarMemoria/listaDeMemorias',{method:'GET'});
+  const data = await fetch('/minhasMemorias/adicionarMemoria/listaDeMemorias', { method: 'GET' });
   const memorias = await data.json();
 
   memorias.forEach(memoria => {
-    const table = document.createElement('Table');  
+    const table = document.createElement('Table');
     table.innerHTML = `
         <tr>
             <th>Id </th>
@@ -34,12 +34,12 @@ async function fetchMemorias() {
     
     `;
     lista.appendChild(table);
-    
+
   }
   )
-  
-}
 
+}
+/* 
 async function addMemoria(event) {
   event.preventDefault();
   const titulo= document.getElementById('tituloMemoria').value.trim();
@@ -57,4 +57,4 @@ async function addMemoria(event) {
     }),
     headers: {'Content-Type': 'application/json'}
   });
-}
+} */
