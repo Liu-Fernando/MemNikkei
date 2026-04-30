@@ -48,10 +48,10 @@ def add_memoria():
         supabase.table("memorias").insert(new_row).execute()
         return render_template("minhasMemorias_adicionarMemoria.html")
         
-@app.route("/minhasMemorias/adicionarMemoria", methods =["DELETE"])
+@app.route("/minhasMemorias/minhaGaleria/<int:memoria_id>", methods =["DELETE"])
 def delete_memoria(memoria_id):
         res= supabase.table("memorias").delete().eq("id",memoria_id).execute()
-        return
+        return render_template("minhasMemorias_minhaGaleria.html")
 
 @app.route("/")
 def home():

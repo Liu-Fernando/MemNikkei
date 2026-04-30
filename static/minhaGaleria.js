@@ -7,6 +7,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 });
 
+
+
 const container = document.getElementById('container');
 
 async function fetchMemorias() {
@@ -57,6 +59,17 @@ async function fetchMemorias() {
             pLocal.textContent = memoria.local;
             divCreditos.appendChild(pLocal);
             container.appendChild(divLocal);
+
+            const divDelete = document.createElement('div');
+            divDelete.className='botaoDelete'
+            const pDelete = document.createElement('button');
+            pDelete.addEventListener("click", function(){
+                deleteMemoria(memoria.id)
+            });
+            pDelete.textContent= 'Excluir';
+            divDelete.appendChild(pDelete);
+            container.appendChild(divDelete);
+
         }
         )
 
@@ -66,3 +79,8 @@ async function fetchMemorias() {
     }
 }
 
+async function  deleteMemoria(id) {
+    if(!confirm("Excluir essa memória?")) return;
+    await fetch(`/minhasMemorias/minhaGaleria/${id}`, { method: 'DELETE' });
+    
+}
