@@ -60,7 +60,7 @@ const questionario = {
     }
 }
 
-//local para armazenar as respostas das perguntas (claude gerou, não sei como vcs vão fazer)
+//local para armazenar as respostas das perguntas
 const respostas = {
     raizes: {},
     soloTerra: {},
@@ -117,7 +117,7 @@ function renderizarTema(index) {
         botaoFinalizar.textContent = "Finalizar";
         container.appendChild(botaoFinalizar);
 
-        botaoFinalizar.addEventListener('click', () => { //claude gerou
+        botaoFinalizar.addEventListener('click', () => {
             const inputs = document.querySelectorAll('.inputPergunta');
 
             inputs.forEach((input, i) => {
@@ -134,7 +134,7 @@ function renderizarTema(index) {
         botaoProximo.textContent = "Próximo";
         container.appendChild(botaoProximo);
 
-        botaoProximo.addEventListener('click', () => { //claude gerou 
+        botaoProximo.addEventListener('click', () => {
             const inputs = document.querySelectorAll('.inputPergunta');
 
             inputs.forEach((input, i) => {
