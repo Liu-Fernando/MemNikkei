@@ -142,10 +142,11 @@ a.btn{
     all: unset;
     box-sizing: border-box;
 
-    position: fixed;
+    position: sticky;
     top: 3vw;
-    left: 3vw;
     z-index: 100;
+    align-self: flex-start;
+    margin: 3vw 0 3vw 3vw;
 
     display: inline-flex;
     align-items: center;
