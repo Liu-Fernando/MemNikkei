@@ -139,8 +139,38 @@ a.btn{
 }
 
 .btn-voltar{
-    width: 18vw;
-    height: 7vh;
+    all: unset;
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+    font-family: Inter;
+    font-size: 5vw;
+    font-weight: bold;
+
+    padding: 2vw 5vw;
+    margin: 3vw 0;
+
+    background-color: #858585;
+    color: #ffffff;
+    border-radius: 10vw;
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-voltar:hover,
+.btn-voltar:focus{
+    background-color: #6d6d6d;
+    outline: none;
+}
+
+.btn-voltar-seta{
+    font-size: 6vw;
+    line-height: 1;
 }
 
 .nav-localizacao{
