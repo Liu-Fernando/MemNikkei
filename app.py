@@ -4,6 +4,8 @@ from supabase import create_client, Client
 from dotenv import load_dotenv
 from datetime import datetime
 from io import BufferedReader
+from flask import send_from_directory
+
 
 load_dotenv()
 
@@ -60,6 +62,10 @@ def home():
 @app.route("/paginaInicial")
 def paginaInicial():
     return render_template("paginaInicial.html")
+
+@app.route('/favicon.ico')
+def favicon():
+      return send_from_directory(app.static_folder, 'favicon.ico')
 
 ##################################  RELEMBRAR TRADIÇÕES  ##############################
 
