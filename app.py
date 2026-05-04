@@ -4,7 +4,7 @@ from datetime import timedelta, datetime
 from dotenv import load_dotenv
 from supabase import create_client, Client
 from functools import wraps
-from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash, send_from_directory
 
 load_dotenv(override=True)
 
@@ -21,6 +21,11 @@ supabase_admin: Client = create_client(
     os.getenv("SUPABASE_URL"),
     os.getenv("SUPABASE_SECRET_KEY")
 )
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.static_folder, 'MemLogo.png', mimetype='image/png')
+
 
 def login_required(f):
     @wraps(f)
