@@ -479,7 +479,6 @@ ul{
 
 .capaJogo p {
     font-family: Inter;
-    font-size: 9vw;
     color: black;
     margin-bottom: 0; 
     padding-bottom: 0;
@@ -487,9 +486,8 @@ ul{
 
 .tituloJogo p {
     font-family: Inter;
-    font-size: 7.5vw;
+    font-size: 10vw;
     color: white;
-    margin-top: 8vw; 
     padding-top: 0;
     font-weight: bold;
 }
