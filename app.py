@@ -209,6 +209,10 @@ def minhaJornadaIkigai():
 def jogosCognitivos():
         return render_template("jogosCognitivos_PaginaInicial.html")
 
+@app.route("/jogosCognitivos/termo")
+def termo():
+        return render_template("termo.html")
+
 ##################################  SAÚDE MENTAL  ##############################
 @app.route("/saudeMental")
 def saudeMental():
