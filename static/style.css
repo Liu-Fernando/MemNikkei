@@ -142,21 +142,26 @@ a.btn{
     all: unset;
     box-sizing: border-box;
 
+    position: fixed;
+    top: 3vw;
+    left: 3vw;
+    z-index: 100;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 2vw;
+    gap: 1.5vw;
 
     font-family: Inter;
-    font-size: 5vw;
+    font-size: 4.5vw;
     font-weight: bold;
 
-    padding: 2vw 5vw;
-    margin: 3vw 0;
+    padding: 1.5vw 4vw;
 
-    background-color: #858585;
+    background-color: rgba(133, 133, 133, 0.92);
     color: #ffffff;
     border-radius: 10vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 
     cursor: pointer;
     text-decoration: none;
@@ -164,12 +169,12 @@ a.btn{
 
 .btn-voltar:hover,
 .btn-voltar:focus{
-    background-color: #6d6d6d;
+    background-color: rgba(109, 109, 109, 0.95);
     outline: none;
 }
 
 .btn-voltar-seta{
-    font-size: 6vw;
+    font-size: 5.5vw;
     line-height: 1;
 }
 
