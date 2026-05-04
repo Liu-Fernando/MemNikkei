@@ -3,34 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "../static/style.css">
-    <script src="../static/components/header.js" type = "text/javascript" ></script>
- 
-    
-    <title>Mural de histórias</title> 
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/components/header.js" type="text/javascript"></script>
+    <title>Mural de histórias</title>
 </head>
-
-
-
 <body>
     <header-component></header-component>
     {% include 'botao_voltar.html' %}
-    <section class="conteudo"> 
 
-        <p class="destaque"> Esta página ainda está em construção... </p>
+    <section class="conteudo">
+        <h2 class="muralTitulo">Mural de Histórias</h2>
+        <p class="muralSubtitulo">Histórias compartilhadas pela nossa comunidade.</p>
 
-        <div class="balaoChatDireita1"> 
-            <p class="fraseBalao"> Este é um exemplo de balão de mensagem. </p>
-        </div>
+        {% if session.get('user_id') %}
+            <a href="{{ url_for('muralDeHistorias_nova') }}" class="BotaoAzulClaro" id="botaoNovaHistoria">
+                Compartilhar minha história
+            </a>
+        {% else %}
+            <div class="avisoLoginMural">
+                <p>Quer compartilhar sua história também?</p>
+                <a href="{{ url_for('login') }}" class="BotaoAzulClaro" id="botaoNovaHistoria">
+                    Fazer login para publicar
+                </a>
+                <p class="avisoLoginMuralSecundario">
+                    Ainda não tem conta? <a href="{{ url_for('registro') }}">Cadastre-se aqui</a>
+                </p>
+            </div>
+        {% endif %}
 
-        <div class="balaoChatEsquerda"> 
-            <p class="fraseBalao"> Em breve teremos mais conteúdos! </p>
-        </div>
-
-        <div class="balaoChatDireita2"> 
-            <p class="fraseBalao"> Fique atento às novidades! </p>
-        </div>
-
+        {% if historias and historias|length > 0 %}
+            <div class="muralLista">
+                {% for h in historias %}
+                    <article class="cardHistoria">
+                        {% if h.foto_url %}
+                            <img src="{{ h.foto_url }}" alt="Foto da história" class="cardHistoriaFoto">
+                        {% endif %}
+                        <h3 class="cardHistoriaTitulo">{{ h.titulo }}</h3>
+                        <p class="cardHistoriaAutor">por <strong>{{ h.autor_exibicao }}</strong></p>
+                        <p class="cardHistoriaTexto">{{ h.texto }}</p>
+                        {% if session.get('user_id') and session.get('user_id') == h.user_id %}
+                            <form method="POST"
+                                  action="{{ url_for('muralDeHistorias_deletar', historia_id=h.id) }}"
+                                  onsubmit="return confirm('Tem certeza que deseja apagar esta história? Essa ação não pode ser desfeita.');"
+                                  class="formDeletarHistoria">
+                                <button type="submit" class="botaoDeletarHistoria">Apagar minha história</button>
+                            </form>
+                        {% endif %}
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="destaque">Ainda não há histórias publicadas. Seja o primeiro a compartilhar!</p>
+        {% endif %}
     </section>
-
 </body>
+</html>

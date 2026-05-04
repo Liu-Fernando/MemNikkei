@@ -1,9 +1,10 @@
 import os
-from datetime import timedelta
+import uuid
+from datetime import timedelta, datetime
 from dotenv import load_dotenv
 from supabase import create_client, Client
 from functools import wraps
-from flask import Flask, render_template, request, redirect, url_for, session, jsonify
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify, flash
 
 load_dotenv(override=True)
 
@@ -14,6 +15,11 @@ app.permanent_session_lifetime = timedelta(days=7)
 supabase: Client = create_client(
     os.getenv("SUPABASE_URL"),
     os.getenv("SUPABASE_KEY")
+)
+
+supabase_admin: Client = create_client(
+    os.getenv("SUPABASE_URL"),
+    os.getenv("SUPABASE_SECRET_KEY")
 )
 
 def login_required(f):
@@ -278,9 +284,113 @@ def referenciasOlimpicas():
 
 ##################################  MURAL DE HISTÓRIAS  ##############################
 @app.route("/muralDeHistorias")
-@login_ou_guest
 def muralDeHistorias():
-        return render_template("muralDeHistorias.html")
+    try:
+        resultado = (
+            supabase_admin.table("historias")
+            .select("id, user_id, autor_nome, anonimo, titulo, texto, foto_url, criado_em")
+            .order("criado_em", desc=True)
+            .execute()
+        )
+        historias = resultado.data or []
+    except Exception:
+        historias = []
+    for h in historias:
+        if h.get("anonimo"):
+            h["autor_exibicao"] = "Anônimo"
+        else:
+            h["autor_exibicao"] = h.get("autor_nome") or "Anônimo"
+    return render_template("muralDeHistorias.html", historias=historias)
+
+
+@app.route("/muralDeHistorias/nova", methods=["GET", "POST"])
+@login_required
+def muralDeHistorias_nova():
+    if request.method == "POST":
+        titulo = (request.form.get("titulo") or "").strip()
+        texto = (request.form.get("texto") or "").strip()
+        autor_nome = (request.form.get("autor_nome") or "").strip()
+        anonimo = request.form.get("anonimo") == "on"
+        foto = request.files.get("foto")
+
+        if not titulo or not texto or not autor_nome:
+            return render_template(
+                "muralDeHistorias_nova.html",
+                erro="Preencha nome, título e história.",
+                form=request.form,
+            )
+
+        foto_url = None
+        if foto and foto.filename:
+            try:
+                ext = os.path.splitext(foto.filename)[1].lower() or ".jpg"
+                nome_arquivo = f"{session['user_id']}/{uuid.uuid4().hex}{ext}"
+                conteudo = foto.read()
+                supabase_admin.storage.from_("historias-fotos").upload(
+                    nome_arquivo,
+                    conteudo,
+                    {"content-type": foto.mimetype or "image/jpeg"},
+                )
+                foto_url = supabase_admin.storage.from_("historias-fotos").get_public_url(nome_arquivo)
+            except Exception:
+                return render_template(
+                    "muralDeHistorias_nova.html",
+                    erro="Não foi possível enviar a foto. Tente novamente ou publique sem foto.",
+                    form=request.form,
+                )
+
+        try:
+            supabase_admin.table("historias").insert({
+                "user_id": session["user_id"],
+                "autor_nome": autor_nome,
+                "anonimo": anonimo,
+                "titulo": titulo,
+                "texto": texto,
+                "foto_url": foto_url,
+            }).execute()
+            return redirect(url_for("muralDeHistorias"))
+        except Exception:
+            return render_template(
+                "muralDeHistorias_nova.html",
+                erro="Erro ao publicar. Tente novamente.",
+                form=request.form,
+            )
+
+    return render_template("muralDeHistorias_nova.html")
+
+
+@app.route("/muralDeHistorias/<historia_id>/deletar", methods=["POST"])
+@login_required
+def muralDeHistorias_deletar(historia_id):
+    try:
+        resultado = (
+            supabase_admin.table("historias")
+            .select("user_id, foto_url")
+            .eq("id", historia_id)
+            .single()
+            .execute()
+        )
+        historia = resultado.data
+    except Exception:
+        return redirect(url_for("muralDeHistorias"))
+
+    if not historia or historia.get("user_id") != session.get("user_id"):
+        return redirect(url_for("muralDeHistorias"))
+
+    foto_url = historia.get("foto_url")
+    if foto_url and "historias-fotos/" in foto_url:
+        try:
+            caminho = foto_url.split("historias-fotos/", 1)[1]
+            supabase_admin.storage.from_("historias-fotos").remove([caminho])
+        except Exception:
+            pass
+
+    try:
+        supabase_admin.table("historias").delete().eq("id", historia_id).execute()
+    except Exception:
+        pass
+
+    return redirect(url_for("muralDeHistorias"))
 
 ##################################  MINHAS MEMÓRIASS  ##############################
 @app.route("/minhasMemorias")
