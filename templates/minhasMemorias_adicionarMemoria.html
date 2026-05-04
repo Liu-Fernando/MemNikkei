@@ -1,87 +1,81 @@
-<!-- TEM QUE BOTAR DESENHOS AQUI E A BARRA DE NAVEGAÇÃO FORMULÁRIO (REVER)-->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "../static/style.css">
-    <script src="../static/components/header.js" type = "text/javascript" ></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/components/header.js" type="text/javascript"></script>
     <title>Adicionar Memoria</title>
-
 </head>
-
+<body>
     <header-component></header-component>
     {% include 'botao_voltar.html' %}
-    <section class = "conteudo" > 
-    <h2 id = "titulinho"> Guarde suas Memórias aqui! <br> Você pode inserir uma fotos de cada vez. </h2>
+    <section class="conteudo">
+        <h2 id="titulinho">Guarde suas Memórias aqui! <br> Você pode inserir uma foto de cada vez.</h2>
 
-    <form>
+        {% if erro %}
+            <p class="erroMensagem">{{ erro }}</p>
+        {% endif %}
 
-        <div class="BotaoAzulClaro" id="uploadArquivos"> Selecionar arquivo
-            <input
-            type="file"
-            id="selecionarArquivos"
-            name="selecionarArquivos"
-            >
-        </div>
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('minhasMemorias_adicionarMemoria') }}">
 
-        <div class = "textBox"> 
+            <label class="BotaoAzulClaro" id="uploadArquivos" for="selecionarArquivos">
+                Selecionar arquivo
+                <input
+                    type="file"
+                    id="selecionarArquivos"
+                    name="selecionarArquivos"
+                    accept="image/*"
+                >
+            </label>
 
-            <label for="tituloMemoria">Título da memória: </label>
-            <input 
-                type="text" 
-                id="tituloMemoria" 
-                name="tituloMemoria"
-                minlength="5"
-                maxlength="100"
-                size="10"
-                placeholder="Digite o título da memória"
-            ><br><br>
+            <div class="textBox">
 
-            <label for="dataMemoria">Data da memória: </label>
-            <input
-                type="date" 
-                id="dataMemoria" 
-                name="dataMemoria"
-                placeholder="dd/mm/aaaa"
-                required
-            ><br><br>
+                <label for="dataMemoria">Data da memória: <span class="campoObrigatorio">*Obrigatório</span></label>
+                <input
+                    type="date"
+                    id="dataMemoria"
+                    name="dataMemoria"
+                    placeholder="dd/mm/aaaa"
+                    value="{{ form.dataMemoria if form else '' }}"
+                    required
+                ><br><br>
 
-            <script>
-            document.getElementById('dataMemoria').max = new Date().toISOString().split('T')[0];
-            </script>
+                <script>
+                    document.getElementById('dataMemoria').max = new Date().toISOString().split('T')[0];
+                </script>
 
-            <label for="localMemoria">Local da memória: </label>
-            <input
-                type="text" 
-                id="localMemoria" 
-                name="localMemoria"
-                minlength="5"
-                maxlength="30"
-                size="10"
-                placeholder="Digite o local da memória"
-            ><br><br>
+                <label for="tituloMemoria">Título da memória: <span class="campoOpcional">Opcional</span></label>
+                <input
+                    type="text"
+                    id="tituloMemoria"
+                    name="tituloMemoria"
+                    maxlength="100"
+                    placeholder="Digite o título da memória"
+                    value="{{ form.tituloMemoria if form else '' }}"
+                ><br><br>
 
-            <label for="descricao"> Descrição da memória: </label>
-            <textarea
-                id="descricao" 
-                name="descricao"
-                minlength="5"
-                maxlength="400"
-                placeholder="Descreva esta memória"
-            ></textarea><br><br>
+                <label for="localMemoria">Local da memória: <span class="campoOpcional">Opcional</span></label>
+                <input
+                    type="text"
+                    id="localMemoria"
+                    name="localMemoria"
+                    maxlength="60"
+                    placeholder="Digite o local da memória"
+                    value="{{ form.localMemoria if form else '' }}"
+                ><br><br>
 
-            <input type="submit" value="Enviar">
+                <label for="descricao">Descrição da memória: <span class="campoOpcional">Opcional</span></label>
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    maxlength="400"
+                    placeholder="Descreva esta memória"
+                >{{ form.descricao if form else '' }}</textarea><br><br>
 
-        </div>
-
-    </form>
-
-    <!-- Temos que ver como vamos lidar com o recebimento dos nomes dos arquivos -->
+                <input type="submit" value="Salvar memória">
+            </div>
+        </form>
     </section>
-
-
-<body>
-
 </body>
+</html>

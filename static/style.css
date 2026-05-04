@@ -276,6 +276,9 @@ body::after { /* pseudo elemento */
     text-align: center;
     padding-top: 8vw;
     font-weight: bold;
+    box-sizing: border-box;
+    max-width: 90vw;
+    margin: 0 auto;
 }
 
 /* botão enviar página adicionar memória */
@@ -307,8 +310,10 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
   display: block;
+  box-sizing: border-box;
   margin: 0 auto;
-  width: 85vw;
+  width: 80vw;
+  max-width: 100%;
   height: 8vw;
   padding: 2vw;
   font-size: 7vw;
@@ -328,8 +333,11 @@ input[type="file"] {
 
 /** input da descrição. Precisa de mais espaço para a pessoa enxergar o que está escrevendo**/
 #descricao {
+    display: block;
+    margin: 0 auto;
     height: 100vw;
-    width: 90vw;
+    width: 80vw;
+    max-width: 100%;
     font-size: 7vw;
     padding: 2vw;
     border-color: black;
@@ -339,12 +347,16 @@ input[type="file"] {
 }
 
 input[type="date"]{
-    width: 85vw; 
-  height: 8vw; 
-  padding: 2vw; 
-  font-size: 7vw;
-  border-color: black;
-  font-family: Inter;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 80vw;
+    max-width: 100%;
+    height: 8vw;
+    padding: 2vw;
+    font-size: 6vw;
+    border-color: black;
+    font-family: Inter;
 }
 
 /** Quando o usuário clica em uma parte do formulário, fica evidente que ele está escrevendo ali**/
@@ -542,6 +554,307 @@ ul{
     border-radius: 8vw;
     margin-bottom: 6vw;
     display: flex;
+}
+
+/* Cards do Mural de Histórias */
+.muralTitulo{
+    font-family: Inter;
+    font-size: 9vw;
+    text-align: center;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+}
+
+.muralSubtitulo{
+    font-family: Inter;
+    font-size: 5vw;
+    text-align: center;
+    margin-bottom: 6vw;
+    color: #444;
+}
+
+#botaoNovaHistoria{
+    margin-bottom: 8vw;
+}
+
+.muralLista{
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+    padding: 0 4vw;
+}
+
+.cardHistoria{
+    background-color: #fff;
+    border: 2px solid #1e497c;
+    border-radius: 5vw;
+    padding: 5vw;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cardHistoriaFoto{
+    width: 100%;
+    border-radius: 3vw;
+    margin-bottom: 4vw;
+    object-fit: cover;
+    max-height: 80vw;
+}
+
+.cardHistoriaTitulo{
+    font-family: Inter;
+    font-size: 7vw;
+    color: #1e497c;
+    margin: 0 0 2vw 0;
+}
+
+.cardHistoriaAutor{
+    font-family: Inter;
+    font-size: 5vw;
+    color: #555;
+    margin: 0 0 3vw 0;
+}
+
+.cardHistoriaTexto{
+    font-family: Inter;
+    font-size: 5.5vw;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.formNovaHistoria textarea{
+    display: block;
+    width: 85vw;
+    margin: 0 auto;
+    padding: 2vw;
+    font-size: 5.5vw;
+    font-family: Inter;
+    border: 1px solid black;
+    border-radius: 2vw;
+    resize: vertical;
+}
+
+.checkboxAnonimo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    font-size: 5.5vw;
+    font-family: Inter;
+}
+
+.checkboxAnonimo input{
+    width: 6vw;
+    height: 6vw;
+}
+
+.erroMensagem{
+    color: #b33e3e;
+    font-family: Inter;
+    font-size: 5.5vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.avisoLoginMural{
+    text-align: center;
+    margin-bottom: 8vw;
+}
+
+.avisoLoginMural > p{
+    font-family: Inter;
+    font-size: 5.5vw;
+    margin-bottom: 3vw;
+}
+
+.avisoLoginMuralSecundario{
+    font-size: 4.5vw !important;
+    margin-top: 3vw !important;
+    color: #555;
+}
+
+.avisoLoginMuralSecundario a{
+    color: #1e497c;
+    font-weight: bold;
+}
+
+.formDeletarHistoria{
+    margin-top: 4vw;
+    text-align: right;
+}
+
+.botaoDeletarHistoria{
+    all: unset;
+    box-sizing: border-box;
+    font-family: Inter;
+    background-color: #b33e3e;
+    color: white;
+    padding: 2vw 5vw;
+    border-radius: 10vw;
+    font-size: 4.5vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botaoDeletarHistoria:hover,
+.botaoDeletarHistoria:focus{
+    background-color: #8a2e2e;
+}
+
+.filtrosGaleria{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 4vw;
+    margin: 4vw;
+    background-color: #f3f6fb;
+    border: 2px solid #1e497c;
+    border-radius: 4vw;
+    font-family: Inter;
+    font-size: 5vw;
+}
+
+.filtrosGaleria input[type="text"],
+.filtrosGaleria input[type="date"]{
+    font-family: Inter;
+    font-size: 5vw;
+    padding: 2vw;
+    border: 1px solid #1e497c;
+    border-radius: 2vw;
+}
+
+.filtrosGaleria .BotaoAzulClaro,
+.filtrosGaleria button,
+.filtrosGaleria .botaoVoltar{
+    width: auto;
+    height: auto;
+    align-self: center;
+    padding: 2vw 6vw;
+    font-size: 5vw;
+    border-radius: 10vw;
+    margin-top: 2vw;
+}
+
+.filtrosGaleria .BotaoAzulClaro{
+    background-color: #1e497c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/** Indicadores de campos no formulário **/
+
+.campoObrigatorio{
+    color: #b33e3e;
+    font-size: 4vw;
+    font-weight: normal;
+    margin-left: 2vw;
+}
+
+.campoOpcional{
+    color: #777;
+    font-size: 4vw;
+    font-weight: normal;
+    font-style: italic;
+    margin-left: 2vw;
+}
+
+/** Formulário Adicionar Memória — caixas de texto **/
+
+.textBox{
+    background-color: #fff;
+    border-radius: 5vw;
+    padding: 6vw 5vw;
+    margin: 4vw;
+    box-shadow: 0 4px 14px rgba(30, 73, 124, 0.12);
+    border: 1px solid #e3e8f0;
+}
+
+.textBox label:not(.BotaoAzulClaro):not(.checkboxAnonimo){
+    display: block;
+    font-family: Inter;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #1e497c;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
+
+.textBox .BotaoAzulClaro{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 18vw;
+    font-size: 6vw;
+    padding: 4vw 5vw;
+    margin: 2vw 0;
+}
+
+.textBox input[type="text"],
+.textBox input[type="date"],
+.textBox textarea{
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Inter;
+    font-size: 5vw;
+    padding: 3.5vw 4vw;
+    border: 1.5px solid #c7d2e3;
+    border-radius: 3vw;
+    background-color: #fafbfd;
+    color: #111;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    outline: none;
+}
+
+.textBox input[type="text"]::placeholder,
+.textBox textarea::placeholder{
+    color: #9aa6b8;
+}
+
+.textBox input[type="text"]:hover,
+.textBox input[type="date"]:hover,
+.textBox textarea:hover{
+    border-color: #8ea4c4;
+}
+
+.textBox input[type="text"]:focus,
+.textBox input[type="date"]:focus,
+.textBox textarea:focus{
+    border-color: #1e497c;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(30, 73, 124, 0.15);
+}
+
+.textBox textarea{
+    min-height: 28vw;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.textBox input[type="submit"]{
+    display: block;
+    width: 100%;
+    margin-top: 4vw;
+    padding: 4vw;
+    border: none;
+    border-radius: 10vw;
+    background-color: #1e497c;
+    color: white;
+    font-family: Inter;
+    font-size: 5.5vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 3px 10px rgba(30, 73, 124, 0.25);
+}
+
+.textBox input[type="submit"]:hover{
+    background-color: #163961;
+}
+
+.textBox input[type="submit"]:active{
+    transform: translateY(1px);
 }
 
 

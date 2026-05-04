@@ -402,13 +402,144 @@ def minhasMemorias():
 def linhaDoTempo():
         return render_template("linhaDoTempo.html")
 
-@app.route("/minhasMemorias/adicionarMemoria")
+@app.route("/minhasMemorias/adicionarMemoria", methods=["GET", "POST"])
+@login_required
 def minhasMemorias_adicionarMemoria():
-        return render_template("minhasMemorias_adicionarMemoria.html")
+    if request.method == "POST":
+        titulo = (request.form.get("tituloMemoria") or "").strip()
+        data_memoria = (request.form.get("dataMemoria") or "").strip()
+        local = (request.form.get("localMemoria") or "").strip()
+        descricao = (request.form.get("descricao") or "").strip()
+        foto = request.files.get("selecionarArquivos")
 
-@app.route("/minhasMemorias//minhaGaleria")
+        if not data_memoria:
+            return render_template(
+                "minhasMemorias_adicionarMemoria.html",
+                erro="A data da memória é obrigatória.",
+                form=request.form,
+            )
+
+        foto_url = None
+        if foto and foto.filename:
+            try:
+                ext = os.path.splitext(foto.filename)[1].lower() or ".jpg"
+                nome_arquivo = f"{session['user_id']}/{uuid.uuid4().hex}{ext}"
+                conteudo = foto.read()
+                supabase_admin.storage.from_("memorias-fotos").upload(
+                    nome_arquivo,
+                    conteudo,
+                    {"content-type": foto.mimetype or "image/jpeg"},
+                )
+                foto_url = nome_arquivo
+            except Exception:
+                return render_template(
+                    "minhasMemorias_adicionarMemoria.html",
+                    erro="Não foi possível enviar a foto. Tente novamente ou salve sem foto.",
+                    form=request.form,
+                )
+
+        try:
+            supabase_admin.table("galeria_memorias").insert({
+                "user_id": session["user_id"],
+                "titulo": titulo,
+                "data_memoria": data_memoria,
+                "local": local or None,
+                "descricao": descricao or None,
+                "foto_url": foto_url,
+            }).execute()
+            return redirect(url_for("minhasMemorias_minhaGaleria"))
+        except Exception:
+            return render_template(
+                "minhasMemorias_adicionarMemoria.html",
+                erro="Erro ao salvar a memória. Tente novamente.",
+                form=request.form,
+            )
+
+    return render_template("minhasMemorias_adicionarMemoria.html")
+
+
+@app.route("/minhasMemorias/minhaGaleria")
+@login_required
 def minhasMemorias_minhaGaleria():
-        return render_template("minhasMemorias_minhaGaleria.html")
+    filtro_titulo = (request.args.get("titulo") or "").strip()
+    data_inicio = (request.args.get("data_inicio") or "").strip()
+    data_fim = (request.args.get("data_fim") or "").strip()
+
+    try:
+        query = (
+            supabase_admin.table("galeria_memorias")
+            .select("id, titulo, data_memoria, local, descricao, foto_url, criado_em")
+            .eq("user_id", session["user_id"])
+        )
+        if filtro_titulo:
+            query = query.ilike("titulo", f"%{filtro_titulo}%")
+        if data_inicio:
+            query = query.gte("data_memoria", data_inicio)
+        if data_fim:
+            query = query.lte("data_memoria", data_fim)
+        resultado = query.order("data_memoria", desc=True).execute()
+        memorias = resultado.data or []
+    except Exception:
+        memorias = []
+
+    for m in memorias:
+        caminho = m.get("foto_url")
+        if caminho:
+            try:
+                assinada = supabase_admin.storage.from_("memorias-fotos").create_signed_url(caminho, 3600)
+                m["foto_signed_url"] = assinada.get("signedURL") or assinada.get("signed_url")
+            except Exception:
+                m["foto_signed_url"] = None
+        else:
+            m["foto_signed_url"] = None
+
+        data_str = m.get("data_memoria") or ""
+        try:
+            dt = datetime.strptime(data_str[:10], "%Y-%m-%d")
+            m["data_formatada"] = dt.strftime("%d/%m/%Y")
+        except ValueError:
+            m["data_formatada"] = data_str
+
+    return render_template(
+        "minhasMemorias_minhaGaleria.html",
+        memorias=memorias,
+        filtro_titulo=filtro_titulo,
+        data_inicio=data_inicio,
+        data_fim=data_fim,
+    )
+
+
+@app.route("/minhasMemorias/<memoria_id>/deletar", methods=["POST"])
+@login_required
+def minhasMemorias_deletar(memoria_id):
+    try:
+        resultado = (
+            supabase_admin.table("galeria_memorias")
+            .select("user_id, foto_url")
+            .eq("id", memoria_id)
+            .single()
+            .execute()
+        )
+        memoria = resultado.data
+    except Exception:
+        return redirect(url_for("minhasMemorias_minhaGaleria"))
+
+    if not memoria or memoria.get("user_id") != session.get("user_id"):
+        return redirect(url_for("minhasMemorias_minhaGaleria"))
+
+    caminho = memoria.get("foto_url")
+    if caminho:
+        try:
+            supabase_admin.storage.from_("memorias-fotos").remove([caminho])
+        except Exception:
+            pass
+
+    try:
+        supabase_admin.table("galeria_memorias").delete().eq("id", memoria_id).execute()
+    except Exception:
+        pass
+
+    return redirect(url_for("minhasMemorias_minhaGaleria"))
 
 ##################################  AUTOCONHECIMENTO  ##############################
 @app.route("/autoconhecimento")
