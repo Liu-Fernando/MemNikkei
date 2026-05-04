@@ -398,10 +398,6 @@ def muralDeHistorias_deletar(historia_id):
 def minhasMemorias():
         return render_template("minhasMemorias.html")
 
-@app.route("/linhaDoTempo")
-def linhaDoTempo():
-        return render_template("linhaDoTempo.html")
-
 @app.route("/minhasMemorias/adicionarMemoria", methods=["GET", "POST"])
 @login_required
 def minhasMemorias_adicionarMemoria():
