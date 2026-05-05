@@ -10,7 +10,7 @@
 
 */
 
-//6:40 -> se eu for botar palavras em japonês, vou ter que mudar essa lista enorme (possivelmente). Teria que verificar quais palavras gostariam de encaixar aqui
+//ver mais palavras que podem ser sorteadas com as meninas de geronto 
 
 window.onload = function(){
     inicializar();
