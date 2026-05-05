@@ -125,14 +125,14 @@ function processaInput(e){
 
         if(coluna < largura) return; // palavra incompleta
 
-        // monta a palavra digitada (minúscula para comparar com o Set)
+        // monta a palavra digitada minúscula para comparar com o set lá embaixo
         let tentativa = "";
         for(let c = 0; c < largura; c++){
             let ladrilho = document.getElementById(linha.toString() + "-" + c.toString());
             tentativa += ladrilho.innerText.toLowerCase();
         }
 
-        // normaliza se necessário (ex: "abaca" → "abacá") e checa o Set
+        // normaliza se necessário (acentos) e checa o set lá embaixo
         let tentativaNormalizada = palavrasNormalizadas[tentativa] || tentativa;
         if(!palavrasAceitas.has(tentativaNormalizada)){
             alert("Essa palavra não é aceita!");
