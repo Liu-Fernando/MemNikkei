@@ -125,7 +125,7 @@ function processaInput(e){
 
         if(coluna < largura) return; // palavra incompleta
 
-        // monta a palavra digitada minúscula para comparar com o set lá embaixo
+        // monta a palavra digitada maiúscula para comparar com o set lá embaixo
         let tentativa = "";
         for(let c = 0; c < largura; c++){
             let ladrilho = document.getElementById(linha.toString() + "-" + c.toString());
