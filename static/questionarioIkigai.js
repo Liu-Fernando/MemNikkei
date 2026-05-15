@@ -129,9 +129,9 @@ function renderizarTema(index) {
         botaoFinalizar.textContent = "Finalizar";
         grupoBotoes.appendChild(botaoFinalizar);
 
-        botaoFinalizar.addEventListener('click', () => {
+        botaoFinalizar.addEventListener('click', async () => {
             salvarRespostasAtuais(tema, configuracao);
-            console.log("Respostas finais:", respostas); // próximo passo: enviar para o Flask
+            await enviarParaAnalise();
         });
 
     } else {
@@ -151,3 +151,77 @@ function renderizarTema(index) {
 }
 
 renderizarTema(indiceTemaAtual);
+
+function escapeHtml(s) {
+    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function formatarAnalise(texto) {
+    const blocos = texto.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
+    return blocos.map(bloco => {
+        const tituloSecao = bloco.match(/^\d+\.\s*\*\*(.+?)\*\*\s*:?\s*(.*)$/s);
+        if (tituloSecao) {
+            const titulo = escapeHtml(tituloSecao[1].trim());
+            const resto = tituloSecao[2].trim();
+            let html = `<h3 class="secaoIkigai">${titulo}</h3>`;
+            if (resto) {
+                const seguro = escapeHtml(resto).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+                html += `<p>${seguro.replace(/\n/g, "<br>")}</p>`;
+            }
+            return html;
+        }
+        const seguro = escapeHtml(bloco).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+        return `<p>${seguro.replace(/\n/g, "<br>")}</p>`;
+    }).join("");
+}
+
+async function enviarParaAnalise() {
+    container.innerHTML = '<p class="carregandoIkigai">Analisando suas respostas... isso pode levar alguns segundos.</p>';
+    try {
+        const r = await fetch('/api/ikigai', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ respostas })
+        });
+        const data = await r.json();
+        if (!r.ok || !data.analise) {
+            if (data.tipo === 'quota_esgotada') {
+                container.innerHTML = `
+                    <p class="tema">LIMITE DIÁRIO ATINGIDO</p>
+                    <div class="avisoQuotaIkigai">
+                        <p>${escapeHtml(data.erro)}</p>
+                        <p>Suas respostas não foram perdidas — você pode voltar mais tarde e clicar em <strong>Tentar novamente</strong> para gerar a análise.</p>
+                    </div>
+                    <div class="grupoBotoes">
+                        <button class="botaoProximo" id="btnTentar">Tentar novamente</button>
+                    </div>`;
+                document.getElementById('btnTentar').addEventListener('click', enviarParaAnalise);
+                return;
+            }
+            container.innerHTML = `<p class="erroIkigai">${escapeHtml(data.erro || 'Erro ao gerar análise.')}</p>
+                <button class="botaoProximo" id="btnTentar">Tentar novamente</button>`;
+            document.getElementById('btnTentar').addEventListener('click', enviarParaAnalise);
+            return;
+        }
+        renderizarAnalise(data.analise);
+    } catch (e) {
+        container.innerHTML = `<p class="erroIkigai">Erro de conexão. Verifique sua internet.</p>
+            <button class="botaoProximo" id="btnTentar">Tentar novamente</button>`;
+        document.getElementById('btnTentar').addEventListener('click', enviarParaAnalise);
+    }
+}
+
+function renderizarAnalise(texto) {
+    container.innerHTML = `
+        <p class="tema">SEU IKIGAI</p>
+        <div class="analiseIkigai">${formatarAnalise(texto)}</div>
+        <div class="grupoBotoes">
+            <button class="botaoVoltar" id="btnRefazer">Refazer</button>
+        </div>
+    `;
+    document.getElementById('btnRefazer').addEventListener('click', () => {
+        for (const t of arrayTemas) respostas[t] = {};
+        indiceTemaAtual = 0;
+        renderizarTema(indiceTemaAtual);
+    });
+}
