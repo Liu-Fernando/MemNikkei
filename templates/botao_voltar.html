@@ -1,3 +1,16 @@
-<button onclick="window.history.back()" class="btn-voltar">
-    Voltar
+{# Botão de voltar reutilizável.
+   Uso padrão (volta pela history do navegador):
+       {% include 'botao_voltar.html' %}
+   Uso com destino fixo (sobrescreve o comportamento padrão):
+       {% set voltar_href = '/autoconhecimento' %}
+       {% include 'botao_voltar.html' %}
+#}
+{% if voltar_href %}
+<a href="{{ voltar_href }}" class="btn-voltar" aria-label="Voltar para a página anterior">
+    <span class="btn-voltar-seta">←</span> Voltar
+</a>
+{% else %}
+<button type="button" onclick="window.history.back()" class="btn-voltar" aria-label="Voltar para a página anterior">
+    <span class="btn-voltar-seta">←</span> Voltar
 </button>
+{% endif %}

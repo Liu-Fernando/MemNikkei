@@ -60,7 +60,7 @@ const questionario = {
     }
 }
 
-//local para armazenar as respostas das perguntas (claude gerou, não sei como vcs vão fazer)
+//local para armazenar as respostas das perguntas
 const respostas = {
     raizes: {},
     soloTerra: {},
@@ -81,7 +81,7 @@ function renderizarTema(index) {
     const tema = arrayTemas[index]; //tema = "raizes", "frutos" etc (string)
     const configuracao = questionario[tema]; // configuracao = { titulo, perguntas... }
 
-    container.innerHTML = ''; //serve para limpar o html
+    container.innerHTML = ''; //serve para limpar o html, aparentemente
 
     const tituloTema = document.createElement('p');
     tituloTema.className = 'tema';
@@ -117,7 +117,7 @@ function renderizarTema(index) {
         botaoFinalizar.textContent = "Finalizar";
         container.appendChild(botaoFinalizar);
 
-        botaoFinalizar.addEventListener('click', () => { 
+        botaoFinalizar.addEventListener('click', () => {
             const inputs = document.querySelectorAll('.inputPergunta');
 
             inputs.forEach((input, i) => {
@@ -125,7 +125,7 @@ function renderizarTema(index) {
                 respostas[tema][indiceGlobal] = input.value;
             });
 
-            console.log("Respostas finais:", respostas); 
+            console.log("Respostas finais:", respostas); // trocar pelo que você quiser fazer com os dados
         });
 
     } else {
@@ -134,7 +134,7 @@ function renderizarTema(index) {
         botaoProximo.textContent = "Próximo";
         container.appendChild(botaoProximo);
 
-        botaoProximo.addEventListener('click', () => { 
+        botaoProximo.addEventListener('click', () => {
             const inputs = document.querySelectorAll('.inputPergunta');
 
             inputs.forEach((input, i) => {

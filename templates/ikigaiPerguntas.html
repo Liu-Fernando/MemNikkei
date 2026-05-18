@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='MemLogo.png') }}">
     <title>Perguntas Ikigai</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/questionario.css">
@@ -13,11 +14,40 @@
 
 <body>
     <header-component></header-component>
+    {% include 'botao_voltar.html' %}
     <section class="conteudo">
 
         <div id="container"></div> <!-- cria o container para a página poder aparecer -->
 
     </section>
+
+    {% if tem_analise %}
+    <div id="modalAvisoIkigai" class="modalOverlayIkigai">
+        <div class="avisoIkigai" role="dialog" aria-labelledby="tituloAvisoIkigai" aria-modal="true">
+            <p class="tema" id="tituloAvisoIkigai">ATENÇÃO</p>
+            <p class="textoAvisoIkigai">
+                Você já possui uma análise Ikigai salva no site.
+            </p>
+            <p class="textoAvisoIkigai">
+                Se continuar e fizer um novo questionário, sua análise anterior será <strong>apagada</strong> e substituída pela nova.
+            </p>
+            <p class="textoAvisoIkigai">
+                Caso queira guardar a análise atual, recomendamos que você a copie e salve em algum lugar seguro (e-mail, caderno, documento no computador) antes de continuar.
+            </p>
+            <div class="grupoBotoes">
+                <a class="botaoVoltar" href="{{ url_for('ikigai_minhas_analises') }}">Ver análise atual</a>
+                <button class="botaoProximo" id="btnContinuarIkigai">Continuar mesmo assim</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.body.style.overflow = 'hidden';
+        document.getElementById('btnContinuarIkigai').addEventListener('click', function() {
+            document.getElementById('modalAvisoIkigai').remove();
+            document.body.style.overflow = '';
+        });
+    </script>
+    {% endif %}
 </body>
 
 <script src="/static/questionarioIkigai.js"></script> <!-- fonte do JS que tô usando (tem que vir depois do body mesmo) -->

@@ -103,23 +103,22 @@ headerTemplate.innerHTML = `
 
     .nav-menu{
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: #ff8c88;
+    z-index: 999;
 
     justify-content: flex-start;
     align-items: center;
     flex-direction:column;
-    padding-top: 65px;
+    padding-top: 80px;
     padding-bottom: 80px;
     box-sizing: border-box;
 
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    max-height: 85vh;
     }
 
     .nav-menu.active{
@@ -162,22 +161,38 @@ class Header extends HTMLElement{
     connectedCallback(){
         const shadowRoot = this.attachShadow({mode:'closed'});
 
-        shadowRoot.appendChild(headerTemplate.content);
+        shadowRoot.appendChild(headerTemplate.content.cloneNode(true));
         const btun = shadowRoot.querySelector('.menu-button')
         const navMenu = shadowRoot.querySelector('.nav-menu')
         const closeBtun = shadowRoot.querySelector('.close-menu-button')
+        const ul = shadowRoot.querySelector('ul')
 
         btun.addEventListener('click', ()=> {
+            const headerHeight = shadowRoot.querySelector('header').offsetHeight;
+            navMenu.style.top = headerHeight + 'px';
+            navMenu.style.height = `calc(100vh - ${headerHeight}px)`;
             navMenu.classList.toggle('active');
-            document.body.style.overflow = 'hidden'
+            document.body.style.overflow = 'hidden';
         });
 
         closeBtun.addEventListener('click', ()=> {
             navMenu.classList.remove('active');
             document.body.style.overflow = ''
-        }); 
+        });
 
-        
+        fetch('/auth-status')
+            .then(r => r.json())
+            .then(data => {
+                const li = document.createElement('li');
+                if (data.logado && data.guest) {
+                    li.innerHTML = `<a href="/logout" class="btn btn-menu">Sair (Visitante)</a>`;
+                } else if (data.logado) {
+                    li.innerHTML = `<a href="/logout" class="btn btn-menu">Sair (${data.email})</a>`;
+                } else {
+                    li.innerHTML = `<a href="/login" class="btn btn-menu">Entrar / Cadastrar</a>`;
+                }
+                ul.appendChild(li);
+            });
     }
 }
 
