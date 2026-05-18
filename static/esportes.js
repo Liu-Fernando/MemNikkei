@@ -6,7 +6,7 @@ const paginaEsportes = {
                 texto1: "Símbolo comunitário introduzido pelos imigrantes japoneses, o beisebol consolidou-se como uma das principais expressões esportivas da comunidade nikkei no Brasil.",
 
                 foto1: "/static/luvaBeisebol.jpg",
-                descricaoFoto1: "uau",
+                descricaoFoto1: "Close-up de uma luva de beisebol de couro marrom usada, deitada sobre a terra batida de um campo. Uma bola de beisebol branca com costuras vermelhas está encaixada dentro da luva. Ao lado, o cabo de um taco de beisebol preto repousa no chão. O fundo mostra um campo verde sob um céu claro.",
 
                 textoLinhaDoTempo: "Linha do Tempo",
                 arrayLinhaDoTempo: [
@@ -44,7 +44,7 @@ const paginaEsportes = {
                 ],
 
                 foto2: "/static/quadraBeisebol.jpg",
-                descricaoFoto2: "uau"
+                descricaoFoto2: "Vista aérea do 'home plate' em um campo de beisebol. A base branca em formato de pentágono está centralizada entre as caixas de batedor retangulares demarcadas com cal branca sobre a terra marrom avermelhada. O gramado verde circunda perfeitamente a área de terra batida."
             }
         ]
     },
@@ -55,7 +55,7 @@ const paginaEsportes = {
                 texto1: "  Fundado em 1882 por Jigoro Kano, o judô, cujo nome pode ser traduzido como “caminho suave”, nasceu como uma prática que une técnica e formação moral. O esporte propõe um percurso de autodesenvolvimento guiado pela disciplina, pelo respeito e pela convivência harmoniosa.",
 
                 foto1: "/static/judo1.jpg",
-                descricaoFoto1: "uau",
+                descricaoFoto1: "Momento dinâmico de uma luta de Judô em uma competição oficial. O judoca com uniforme (judogi) azul executa uma técnica de projeção sobre o oponente de uniforme branco, que está sendo derrubado no tatame verde e amarelo. O atleta de azul usa uma faixa preta. Ao fundo, um painel de LED e uma pessoa sentada.",
 
                 textoLinhaDoTempo: "Linha do Tempo",
                 arrayLinhaDoTempo: [
@@ -93,7 +93,7 @@ const paginaEsportes = {
                 ],
 
                 foto2: "/static/judo2.jpeg",
-                descricaoFoto2: "uau"
+                descricaoFoto2: "Uma judoca vestindo judogi azul aplica uma técnica de controle (chave de braço) em um parceiro de treino de judogi branco sobre um tatame amarelo. Ela está sentada, focada na execução do movimento, enquanto segura o braço do oponente."
             }
         ]
     },
@@ -104,7 +104,7 @@ const paginaEsportes = {
                 texto1: "Criado no Japão em 1947 por Eiji Suzuki, na província de Hokkaido, o gateball surgiu no pós-guerra como atividade recreativa acessível às crianças. \n Inspirado em jogos britânicos, mas adaptado à realidade japonesa(pouco espaço e alta densidade populacional) rapidamente passou a atrair também pessoas mais velhas.",
 
                 foto1: "/static/gateball1.jpeg",
-                descricaoFoto1: "uau",
+                descricaoFoto1: "Visão em ângulo baixo de equipamentos de Gateball sobre um gramado sintético verde. Em primeiro plano, um taco de madeira com cabeça retangular escura. No centro, um pequeno arco metálico branco com marcadores coloridos no topo. Ao redor, quatro bolas de jogo nas cores vermelha, amarela, azul e preta.",
 
                 textoLinhaDoTempo: "Linha do Tempo",
                 arrayLinhaDoTempo: [
@@ -141,7 +141,7 @@ const paginaEsportes = {
                 ],
 
                 foto2: "/static/gateball2.jpg",
-                descricaoFoto2: "uau"
+                descricaoFoto2: "Um homem idoso vestindo roupas brancas e chapéu bege pratica Gateball em um campo gramado. Ele está inclinado para frente, segurando um taco longo verticalmente, preparando-se para atingir uma bola vermelha posicionada à sua frente. Ao fundo, vê-se uma cerca de metal e um banco de madeira."
             }
         ]
     }

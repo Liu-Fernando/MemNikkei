@@ -1,11 +1,11 @@
 .titulo{
     font-family: Inter;
-    font-size: 11vw;
+    font-size: 9vw;
     color: #D52229;
     font-weight: 800;
     text-align: center;
     margin-top: 1vw;
-    margin-bottom: 3vw;
+    margin-bottom: 0.5vw;
 }
 
 #board{
@@ -130,4 +130,31 @@
 
 #popup-conteudo button:hover {
     background: #f0f0f0;
+}
+
+/*  CONFIGURAÇÃO PÁGINA DE EXPLICAÇÃO DO TERMO */
+
+.tituloCJ{
+    font-size: 10vw;
+    font-weight: bold;
+    margin-bottom: 0vw;
+    padding-bottom: 0vw;
+
+}
+
+.textoExplicacao{
+    font-size: 6vw;
+    margin-top: 1vw;
+}
+
+.explicacaoImagem{
+    font-size: 6vw;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.divBranca{
+    background-color: #f7f6f2;
+    margin-top: 0;
+    padding-top: 0;
 }

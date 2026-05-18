@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "../static/style.css">
+    <link rel="stylesheet" href= "../static/termo.css">
+    <script src="../static/components/header.js" type = "text/javascript" ></script>
+ 
+    
+    <title>Explicacao Termo</title> 
+</head>
+
+
+<body>
+    <header-component></header-component>
+    {% include 'botao_voltar.html' %}
+    <section class="conteudo">
+
+        <p class="tituloCJ"> Como jogar? </p>
+        <p class="textoExplicacao"> 
+            <span class="destaque"> Você tem 6 tentativas para tentar acertar a palavra. </span>
+            <br>
+            Cada tentativa deve ser uma palavra válida de 5 letras. Cada letra deverá ir em um quadradinho.
+            Depois de cada tentativa, as cores dos quadradinhos do tabuleiro vão te mostrar quão perto você está de acertar a palavra.
+        </p>
+
+        <img src="../static/testeTermo.png" alt="palavra 'teste' em que o quadrado que a letra 's' está contida está verde e o quadrado das outras letras está cinza." style="height: 100%; width: 100%"> 
+
+        <p class="explicacaoImagem"> A letra <span class="destaque"> "S" </span>faz parte da palavra, pois está com o quadradinho <span class="destaque"> verde</span>. </p>
+
+        <img src="../static/tirarTermo.png" alt="palavra 'tirar' em que o quadrado que a letra 'i' está contida está amarelo e o quadrado das outras letras está cinza." style="height: 100%; width: 100%"> 
+
+        <p class="explicacaoImagem"> A letra <span class="destaque"> "I" </span> faz parte da palavra, mas em uma posição diferente, pois está com o quadradinho <span class="destaque"> amarelo</span>. </p>
+
+        <img src="../static/arcarTermo.png" alt="palavra 'arcar' em que todos os quadrados de todas as letras estão cinzas." style="height: 100%; width: 100%"> 
+
+        <p class="explicacaoImagem"> Nenhuma das letras da palavra "arcar" faz parte da palavra, pois todos os quadradinhos estão <span class="destaque"> cinza</span>. </p>
+
+        <img src="../static/tecladoTermo.png" alt="teclado com as letras 'e', 't', 'o' e 'm' em cinza, letra 'i' em amarelo e letra 's' em verde." style="height: 100%; width: 100%">
+
+        <p class="explicacaoImagem"> Se a letra no teclado está em azul, significa que ela ainda não foi testada. 
+            <br> 
+            Se ela está em amarelo, ela foi testada, mas na posição errada na palavra. 
+            <br>
+            Se ela está em verde, ela já foi testada na posição correta. Se ela está cinza, ela foi testada, mas não existe na palavra. </p>
+
+        <a href = "{{ url_for('termo') }}" class = "BotaoAzulClaro" style="font-size: 11vw" > Jogar  </a> <br>
+
+    </section>
+
+</body>
